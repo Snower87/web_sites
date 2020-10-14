@@ -1,0 +1,16 @@
+td { 
+	color: red;
+	font-size: 14pt;
+}
+body {
+	background-color: orange;
+}
+h1 {
+	color:rgb(0, 64, 212);
+}
+p {
+	height: 100px;
+}
+table {
+	height: 320px;
+}
