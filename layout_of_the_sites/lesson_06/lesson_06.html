@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+	<title>Урок №6. Основные CSS свойства</title>
+</head>
+<body>
+	<p><b>Используемый код в Sublime Text:</b></p>
+	<p><b>0) p*5>b</b></p>
+	<p><b>1) p*3>lorem</b></p>	
+	<p><b>h${Это заголовок $}*6</b></p>
+
+
+	<!-- Блок №1. Свойство color - цвет текста
+	Свойство color позволяет задать цвет текста. Цвет можно задавать следующими способами: английским словом, через решетку #, через rgb и некоторыми другими способами, которые мы пока не будем разбирать. -->
+	<!-- Способ первый - английское слово
+	Самый простой и понятный вариант задать цвет - указать его английским словом, например, red задает красный цвет, blue - голубой, green - зеленый, black - черный, white - белый -->
+	<!-- Способ второй - через rgb 
+	Сами буквы rgb расшифровываются как red (красный), green (зеленый), blue (голубой). -->
+	<!-- Способ третий - через # 
+	К примеру, запись rgb(255, 200, 255) можно представить как #FFC8FF - это будет более компактно. -->
+
+	<!-- Блок №2. Свойства width и height - ширина и высота -->
+	<!-- Свойства width и height позволяют задать высоту и ширину элементу соответственно. Ширина и высота обычно измеряются в пикселях (обозначается px) или процентах (обозначается %) -->
+	<!-- Пример:
+	p {
+	width: 300px;
+	height: 100px;
+	border: 1px solid black;
+	} -->
+
+	<!-- Блок №3. Свойство text-align - выравнивание текста -->
+	<!-- Свойство text-align позволяет задать выравнивание текста. Текст можно выравнять по левому краю (значение left), по правому (значение right), по центру (значение center) и одновременно и по правому, и по левому краю (значение justify). -->
+	<!-- Значение left
+	Давайте сделаем так, чтобы текст был выровнен по левому краю. Для этого нужно свойство text-align поставить в значение left: -->
+	<!-- Пример: 
+	p {
+	text-align: left;
+	width: 300px;
+	}
+	 -->
+
+	 <!-- Блок №4. Свойство font-weight - жирность -->
+	 <!-- Свойство font-weight позволяет сделать текст жирным или наоборот - отменить жирность (к примеру, для заголовков, которые жирные по умолчанию). Чтобы сделать текст жирным, следует добавить значение bold, а чтобы отменить жирность - значение normal. -->
+	 <!-- Пример:
+	 h3 {
+		font-weight: normal;
+	}
+
+	p {
+		font-weight: bold;
+	}
+	  -->
+
+	<!-- Блок №5. Свойство font-style - курсив -->
+	<!-- Чтобы сделать текст курсивом, следует добавить значение italic, а чтобы отменить курсив - значение normal. Смотрите пример: -->
+	<!-- p {
+		font-style: italic;
+	} -->
+
+	<!-- Блок №6. Свойство font-size - размер текста -->
+	<!-- Свойство font-size позволяет задать размер текста. Размер задается в пикселях (обозначаются px), в пунктах (обозначаются pt), в процентах (обозначаются %) -->
+	<!-- Между пунктами и пикселями есть соответствие: 12pt = 16px. При этом все размеры на экране на самом деле меряются в пикселях, даже если вы задаете их в пунктах. -->
+	<!-- Пример:
+	p {
+		font-size: 20pt;
+	} -->
+
+	<!-- Блок №7. Свойство font-family - тип шрифта -->
+	<!-- Пример:
+	p {
+		font-family: Arial;
+	} -->
+	<!-- Свойство line-height - задает межстрочный интервал -->
+	<!-- Межстрочный интервал - это расстояние между линиями текста, то есть белый промежуток между ними. -->
+	<!-- Пример:
+	p {
+		font-size: 13px;
+		line-height: 50px;
+	} -->
+
+	<!-- Блок №8. Свойство font - сокращение для шрифтов -->
+	<!-- Свойство font имеет следующий синтаксис: курсив жирность размер_шрифта/интервал_между_строками семейство_шрифта. Обязательными являются "размер_шрифта" и "семейство_шрифта", порядок имеет значение. -->
+	<!-- Пример 1:
+	p {
+		font: 16px Arial;
+	} -->
+	<!-- Пример 2:
+	p {
+		font: italic 16px/50px Arial, sans-serif;
+	}
+	 -->
+
+	<!-- Блок №9. Свойство text-indent - красная строка -->
+	<!-- Свойство text-indent позволяет задать красную строку, то есть отступ первой строки текста (к примеру, в абзаце). -->
+	<!-- Пример:
+	p {
+		text-indent: 50px;
+	}
+	  -->
+
+	<!-- Блок №10. Свойство vertical-align -->
+	<!-- Свойство vertical-align позволяет задать выравнивание по вертикали. К сожалению, адекватным образом это выравнивание работает только для таблиц.
+	Значение top выравнивает по верхнему краю, значение bottom - по нижнему, а middle - по центру по вертикали (есть еще некоторые другие значения, они нас пока не интересуют). -->
+	<!-- Пример:
+	td {
+		vertical-align: top; //middle; //bottom;
+	} -->
+
+	
+	<h1>Это заголовок 1</h1>
+	<h2>Это заголовок 2</h2>
+	<h3>Это заголовок 3</h3>
+	<h4>Это заголовок 4</h4>
+	<h5>Это заголовок 5</h5>
+	<h6>Это заголовок 6</h6>
+	<br>
+
+	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates ullam quibusdam quia excepturi maxime ea facere iusto quae ipsum cum recusandae quod quasi, beatae saepe dolorem! Excepturi iusto maxime veniam!</p>
+	<p>Vitae nesciunt ut neque quasi iste? Ad, cumque nihil at ut minus itaque quia non, harum impedit quae tempora aliquid. Aliquam eligendi quas accusantium recusandae atque impedit ea, ullam possimus.</p>
+	<p>Delectus dolor, mollitia, ullam iste sapiente odit unde? Autem expedita maiores quae explicabo, quibusdam numquam, tempore aliquid dolorum rerum! Earum, quod consequuntur similique architecto qui assumenda voluptas atque, vero cum.</p>
+
+	<table border="1" cellpadding="0" cellspacing="0" width="400" height="200">
+	<tr>
+		<th>номер</th>
+		<th>тэг</th>
+		<th>значение</th>
+	</tr>
+	
+	<tr align="center">
+		<td>1</td>
+		<td>p</td>
+		<td>абзац</td>
+	</tr>
+	<tr align="center">
+		<td>2</td>
+		<td>a</td>
+		<td>ссылка</td>
+	</tr>
+	<tr align="center">
+		<td>3</td>
+		<td>b</td>
+		<td>жирный текст</td>
+	</tr>
+	<tr align="center">
+		<td>4</td>
+		<td>i</td>
+		<td>курсив</td>
+	</tr>
+	<tr align="center">
+		<td>5</td>
+		<td>table</td>
+		<td>таблица</td>
+	</tr>
+	<tr align="center">
+		<td>6</td>
+		<td>tr</td>
+		<td>ряд таблицы</td>
+	</tr>
+	<tr align="center">
+		<td>7</td>
+		<td>td</td>
+		<td>ячейка таблицы</td>
+	</tr>
+	<tr align="center">
+		<td>8</td>
+		<td>th</td>
+		<td>заголовок таблицы</td>
+	</tr>	
+	</table>
+	<br>
+
+	<table border="1" cellpadding="0" cellspacing="0">
+		<tr style="background-color: #f3f3f3;">
+			<th>Значение</th>
+			<th>Описание</th>
+		</tr>
+		<tr style="font-family: Arial;">
+			<td>Arial</td>
+			<td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque, consectetur.</td>
+		</tr>
+		<tr style="font-family: Arial Black;">
+			<td>Arial Black</td>
+			<td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, quibusdam.</td>
+		</tr>
+		<tr style="font-family: Comic Sans MS;">
+			<td>Comic Sans MS</td>
+			<td>Lorem ipsum dolor, sit, amet consectetur adipisicing elit. Ullam, eaque.</td>
+		</tr>
+		<tr style="font-family: Courier New;">
+			<td>Courier New</td>
+			<td>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Necessitatibus, sapiente?</td>
+		</tr>
+		<tr style="font-family: Impact;">
+			<td>Impact</td>
+			<td>Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Magnam, aspernatur.</td>
+		</tr>
+		<tr style="font-family: Times New Roman;">
+			<td>Times New Roman</td>
+			<td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum, mollitia.</td>
+		</tr>
+		<tr style="font-family: Trebuchet MS;">
+			<td>Trebuchet MS</td>
+			<td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, ab?</td>
+		</tr>
+		<tr style="font-family: Verdana; line-height: 35px;">
+			<td>Verdana</td>
+			<td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores, deleniti.</td>
+		</tr>
+	</table>
+</body>
+</html>
