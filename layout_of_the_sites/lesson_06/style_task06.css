@@ -1,0 +1,57 @@
+/*p {
+	color: red;
+	text-align: justify;
+	font-style: italic;
+	font-size: 15px;
+	font-family: Arial;
+	line-height: 30px
+}*/
+p {
+	font: italic 16px Arial;
+	font-weight: bold;
+	line-height: 30px;
+	text-indent: 30px;
+}
+/*
+h1 {
+	color: green;
+	text-align: center;
+	font-weight: normal;
+}*/
+h1 {
+	font: 20px Verdana;
+	font-weight: normal;
+}
+h2 {
+	color: blue;
+	width: 300px;
+	text-align: right;
+	font-style: italic;
+	font-size: 20px
+	font-family: "Times New Roman";
+}
+h3 {
+	color: orange;
+}
+h4 {
+	line-height: 25px;
+}
+table {
+	height: 300px;
+	width: 400px;	
+}
+th {
+	text-align: left;
+	vertical-align: center;
+}
+td {
+	text-align: center;
+	font-weight: bold;
+	vertical-align: left;
+}
+/*
+th, h1, h2 {
+	font-weight: normal;
+	vertical-align: center;
+}
+*/
