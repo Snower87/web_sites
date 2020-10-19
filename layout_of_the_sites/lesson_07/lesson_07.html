@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style_07.css">
+	<title>Урок №7. Основы работы с селекторами CSS</title>
+</head>
+<body>
+	<p><b>Используемый код в Sublime Text:</b></p>	
+	<p><b>p*5>b</b></p>
+	<p><b>p*4>lorem10</b></p>
+	<p><b>h${Это заголовок h$}*6</b></p>
+	<p><b></b></p>
+	<p><b></b></p>
+
+	<!-- Блок №1. Тег div -->
+	<!-- Тег div служит контейнером для других тегов. Сам по себе он ничего не делает, однако в него можно положить много разных тегов, например, абзацев и заголовков, а затем для всех них одновременно применить различные CSS свойства. -->
+	<div style="color: red">
+		<h2>Lorem, ipsum dolor si</h2>
+		<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed, magni.</p>
+		<p>Sequi doloremque sint hic ad! Maxime dolorum perspiciatis modi, eaque!</p>
+		<p>Laborum quas, ea alias, voluptas aliquam inventore neque perferendis expedita.</p>
+	</div>
+
+	<!-- Блок №2. Тег span -->
+	<!-- Тег span является контейнером для кусочка текста. Вы уже знаете, что для того, чтобы сделать, к примеру, жирный текст - следует использовать тег b. Однако, что делать, если я хочу покрасить кусочек текста в красный цвет? Для такого случая тега, подобного тегу b, не существует. -->
+	<!-- Для этого и предназначен тег span - сам по себе он абсолютно ничего не делает, но для него можно применить CSS стили, которые позволят нам добавить нужный эффект к кусочку текста. -->
+	<p>Lorem ipsum <span style="color: blue">dolor</span> sit amet consectetur adipisicing, elit. Aperiam, amet.</p>
+
+	<!-- Блок №3. Группировка селекторов -->
+	<!-- существует способ сделать это немного короче: селекторы тегов можно объединять через запятую и CSS код применится к ним всем одновременно. Приведенный выше код можно переписать покороче таким образом: -->
+	<!-- h2, h3, p {
+		color: red;
+	}	 -->
+	
+	<!-- Блок №4. Вложенность тегов друг в друга -->
+	<!-- Например, так - p i - мы обратимся ко всем тегам i, находящимся внутри p, p b - так ко всем тегам b внутри p, а так - div p b - ко всем тегам b, которые находятся внутри абзацев p, которые в свою очередь находятся внутри тега div. -->
+
+	<!-- В следующем примере мы обратимся ко всем абзацам внутри div и покрасим их в красный цвет. Абзацы вне дива и другие элементы внутри дива (в нашем случае h2) красными не станут: -->
+	<!-- 	
+	div p {
+		color: red;
+	} -->
+	<h2>Блок №4</h2>
+	<div>
+		<h2>Заголовок h2 внутри тега div.</h2>
+		<p>Абзац внутри тега div.</p>
+		<p>Абзац внутри тега div.</p>
+		<p>Абзац внутри тега div.</p>
+	</div>
+	<p>Абзац вне тега div.</p>
+
+
+	<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, voluptatem?</p>
+	<p>Nisi earum officia minima incidunt harum labore possimus, non velit.</p>
+	<p>Commodi odit, similique? Dolorum quae veritatis quod distinctio, aperiam cum.</p>
+	<p>Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Laborum, asperiores.</p>	
+	<h1>Это заголовок h1</h1>
+	<h2>Это заголовок h2</h2>
+	<h3>Это заголовок h3</h3>
+	<h4>Это заголовок h4</h4>
+	<h5>Это заголовок h5</h5>
+	<h6>Это заголовок h6</h6>
+
+
+	<h2>Заголовок h2 с классом test.</h2>
+	<h2>Заголовок h2 с классом test.</h2>
+	<h2>Заголовок h2 с классом test.</h2>
+	<p>Абзац с классом test.</p>
+	<p>Абзац с классом test.</p>
+	<p>Абзац с классом test.</p>
+	<p>Абзац без класса.</p>
+
+</body>
+</html>
