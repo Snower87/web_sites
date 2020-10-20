@@ -5,3 +5,22 @@
 div p {
 	color: red;
 }
+
+p {
+	color: black;
+}
+#test {
+	color: blue;
+}
+
+.test {
+	color: yellow;
+}
+/*
+p.test {
+	color: blue;
+}*/
+
+h2.test {
+	color: green;
+}
