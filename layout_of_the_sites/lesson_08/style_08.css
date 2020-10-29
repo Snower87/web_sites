@@ -12,7 +12,49 @@ p.block1 {
 	text-decoration: none;	
 }
 
+p.block11 {
+	text-decoration: line-through;
+}
+
 /*Блок №2. Состояния ссылок*/
+/*:link, которые отлавливают не посещенную ссылку, и 
+  :visited, которые отлавливают посещенную ссылку.*/
+/* Пример 1
+a:link {
+	color: red;
+}
+a:visited {
+	color: green;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	color: blue;
+}*/
+
+/* Пример 2
+Часто состояния :link и :visited объединяют вместе через запятую:
+a:link, a:visited {
+	color: red;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	color: blue;
+}*/
+
+a {
+	color: red;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	color: blue;
+}
+
 /*Блок №3. Сложные селекторы с учетом состояний ссылок*/
 /*Блок №4. Работа с границами на CSS*/
 /*Блок №5. Свойство-сокращение для границ*/
