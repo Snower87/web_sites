@@ -44,7 +44,8 @@ a:hover {
 a:active {
 	color: blue;
 }*/
-
+/*
+Пример 3
 a {
 	color: red;
 }
@@ -53,11 +54,80 @@ a:hover {
 }
 a:active {
 	color: blue;
-}
+}*/
 
 /*Блок №3. Сложные селекторы с учетом состояний ссылок*/
+/* Пример 1
+a:link.test, a:visited.test {
+	color: red;
+}
+a:hover.test {
+	color: blue;
+}*/
+/*Пример 2*/
+#test a:link, #test a:visited {
+	color: green;
+}
+#test a:hover {
+	color: brown;
+}
 /*Блок №4. Работа с границами на CSS*/
+/*Свойство border-width задает толщину границы, 
+           border-color - цвет, 
+           а border-style задает тип границы.*/
+/*border-style может принимать одно из нескольких значений: 
+- solid (сплошная линия), 
+- dotted (граница в виде точек), 
+- dashed (граница в виде черточек), 
+- ridge (выпуклая граница), 
+- double (двойная граница), 
+- groove (вогнутая граница), 
+- inset (рамка), 
+- outset (рамка) 
+- или none (отменяет границу).*/
+/*Пример 1*/
+p.block4 {
+	border-width: 3px;
+	border-style: dotted;
+	border-color: red;
+	width: 300px;
+	height: 100px;
+}
+/*Пример 2*/
+#test_primer2 {
+	border-width: 1px;
+	border-style: solid;
+	border-color: red;
+	width: 200px;
+	height: 40px;
+}
 /*Блок №5. Свойство-сокращение для границ*/
+/*Пример 1
+ В свойстве border мы можем просто перечислить эти значения, их порядок при этом не важен.
+*/
+.block5_1 {
+	width: 300px;
+	height: 100px;
+	border: 1px solid red;
+}
 /*Блок №6. Граница для отдельных сторон*/
+.block6_1 {
+	width: 300px;
+	height: 100px;
+	border-left: 1px dotted red;
+	border-right: 1px dashed red;
+}
 /*Блок №7. Скругленные уголки*/
+.block7_1 {
+	width: 300px;
+	height: 100px;
+	border: 2px solid green;
+	border-radius: 15px;
+}
 /*Блок №8. Разные скругления для разных углов*/
+.block8_1 {
+	width: 300px;
+	height: 100px;
+	border: 1px solid red;
+	border-radius: 10px 20px 30px 40px;
+}
