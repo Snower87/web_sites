@@ -1,35 +1,55 @@
 "use strict";
 
-//1. Создание и работа с обычными массивами
-var arr = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс']; //создается массив
-//alert(arr[0]);
-//alert(arr[2]);
+//from sites:
+//https://skryvets.com/blog/2018/08/01/6-ways-to-create-a-javascript-object/
 
-//2. Создание и работа с ассоциативными массивами
-var obj2 = {Вася: 200, Петя: 300, Саша: 400};
-alert('Вася получает ' + obj2['Вася']);
-alert(obj2.Вася);
+//Ways:
+//1. Object literal notation
 
-//3. Другие варианты создания массивов и объектов
-var obj3 = new Object({key1 : 100}, {key2 : 200}, {key3 : 300});
-alert('obj3[key1] = ' + obj3['key1']);
-var arr3 = Array(10); //создает массив из 10-ти пустых элементов
-					  //arr = [,,,,,,,,,]
-
-//4. Заполнение массива
-var arr4 = [];
-arr4[0] = 1;
-arr4[1] = 2;
-arr4[2] = 3;
-
-var obj4 = {};
-obj4['Коля'] = 100;
-obj4['Вася'] = 200;
-obj4['Петя'] = 300;
-
-//5. Многомерные массивы
-var students = {
-	'boys': ['Коля', 'Вася', 'Петя'],
-	'girls': ['Даша', 'Маша', 'Лена']
+var pizza1 = {
+	name: 'Margherita',
+	size: 'medium',
+	isVegetarian: true
 }
-alert('5. ' + students['boys'][0]);
+
+//2. The "new()" keyword
+var pizza2 = new Object();
+pizza2.name = 'Margherita';
+pizza2.size = 'medium';
+pizza2.isVegetarian = true;
+
+//3. The Object.create(...) method
+var anotherPizza3 = Object.create(pizza1);
+
+/*
+  console.log(anotherPizza)
+  {
+    name: 'Margherita',
+    size: 'medium',
+    isVegetarian: true
+  }
+*/
+
+//4. Constructor function
+function Pizza() {
+	this.name = 'Margherita',
+	this.size = 'medium',
+	this.isVegetarian = true;
+}
+
+var pizza4 = new Pizza();
+
+//5. The object.assign(...) method
+var anotherPizza5 = Object.assign(pizza1, {
+    name: 'Capricciosa',
+    isVegetarian: false
+})
+
+//6. The JSON.parse(JSON.stringify(object)) method
+var pizza6 = {
+  name: 'Margherita',
+  size: 'medium',
+  isVegetarian: true
+}
+
+var anotherPizza6 = JSON.parse(JSON.stringify(pizza6));
