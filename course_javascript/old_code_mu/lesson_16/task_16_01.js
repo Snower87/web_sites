@@ -70,4 +70,6 @@ function getGreatestCommonDivisor(num1, num2) {
 	return Number(Math.max.apply(null, divisors));
 }
 
-alert(getGreatestCommonDivisor(12, 18)); //выведет 6
+//alert(getGreatestCommonDivisor(12, 18)); //выведет 6
+
+//export default { inArray, getIntersection, getGreatestCommonDivisor} 
