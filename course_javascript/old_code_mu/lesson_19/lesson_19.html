@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Урок №19. Основы работы с DOM в JavaScript</title>
+	<script type="text/javascript" src="task_19_01.js"></script>
+	<script type="text/javascript">
+		function func() {
+			alert('Нажали на кнопку!');
+		}		
+
+		function func1() {
+			alert('1. Раз');
+		}	
+
+		function func2() {
+			alert('2. Два');
+		}			
+
+		function func13() {
+			var elem = document.getElementById('test');
+			alert(elem);
+		}
+
+		function func30() {
+			var elem = document.getElementById('test');
+			alert("value: " + elem.value);
+			alert("id: " + elem.id);
+			alert("type: " + elem.type);
+		}
+
+		var iGlob = 0;
+
+		function func31() {
+			var elem = document.getElementById("text_field");
+			// elem.value = 'func31 выполнилась';
+			elem.value = iGlob++;
+		}
+
+		function func32() {
+			document.getElementById('text_field').value = 'www';
+		}
+
+		function func33() {
+			var elem = document.getElementById('text_field');
+			elem.value = 'www';
+			elem.type = 'submit';
+		}
+
+		function func50() {
+			var elem = document.getElementById('test_classA');
+			alert(elem.className);
+		}
+
+		function func64(id) {
+			var elem = document.getElementById(id);
+			alert(elem.value);
+		}
+	</script>
+</head>
+<body>
+	<!-- 1. Основы работы с событиями -->
+	<!-- Самый простой способ задать реакцию элемента на определенное событие - указать ее с помощью атрибута для определенного тега. К примеру, событию 'нажатие мышкой' соответствует атрибут onclick, событию 'наведение мышкой' - атрибут onmouseover, а событию 'уход курсора с элемента' - атрибут onmouseout. -->
+	<!-- 1.1 В следующем примере по нажатию мышкой на кнопку выполнится функция alert: -->
+	<!-- <input type="submit" onclick="alert('!')"> -->
+
+	<!-- 1.2 Сейчас по клику на элемент выполнится функция func: -->
+	<!-- <input type="submit" onclick="func()" value="Работа func()"> -->
+
+	<!-- 1.3 Можно выполнить не одну функцию, а несколько: -->
+	<!-- <input type="submit" onclick="func1(); func2();" value="Работа func1, func2"> -->
+
+	<!-- 2. Работа с getElementById -->
+	<!-- Пусть у нас на странице есть тег с атрибутом id в значении test. Запишем ссылку на этот тег в переменную elem. Для этого мы должны воспользоваться методом getElementById, который получает элемент по его id. -->
+	<!-- Эта запись произойдет по клику на кнопку, которой мы задали атрибут onclick. По нажатию на эту кнопку сработает функция func, которая найдет на HTML странице элемент с id равным test и запишет ссылку на него в переменную elem:  -->
+	<!-- <input type="text" id="test">
+	<input type="submit" onclick="func13()"> -->
+	<!-- Теперь в переменной elem у нас лежит ссылка на элемент с атрибутом id в значении test. Сама переменная elem является объектом. -->
+
+	<!-- 3. Основы работы с атрибутами HTML через JavaScript -->
+	<!-- Пусть у нас опять даны инпут с id равным test и кнопка, по клику на которую будет запускаться функция func: -->
+	<!-- Внутри функции func30 мы получим наш инпут по его id и запишем ссылку на него в переменную elem -->
+	<!-- <input type="text" value="1" id="test">
+		 <input type="submit" onclick="func30()"> -->
+	<!-- Чтобы получить доступ, к примеру, к атрибуту value, следует написать следующее: elem.value, где elem - это переменная, в которую мы с помощью getElementById записали ссылку на наш элемент, а value - это атрибут тега, который нас интересует. -->
+	<!-- function func30() {
+		var elem = document.getElementById('test');
+		alert(elem.value);
+	} -->
+	<!-- Мы можем таким же образом считывать значения и других атрибутов, например так - elem.id - мы считаем значение атрибута id, а так - elem.type - значение атрибута type. -->
+
+	<!-- 3.1 -->
+	<!-- Можно не только считывать значения атрибутов, но и изменять их. Чтобы, к примеру, поменять значение атрибута value, нужно просто присвоить его конструкции elem.value: -->
+	<!-- <input type="text" value="31" id="text_field">
+	<input type="submit" onclick="func31()"> -->
+
+	<!-- 3.2 -->
+	<!-- Таким же образом (цепочкой) можно производить и перезапись атрибутов: -->
+	<!-- 	<input type="text" value="default" id="text_field">
+	<input type="submit" onclick="func32()"> -->
+
+	<!-- 3.3 -->
+	<!-- <input type="text" value="default33" id="text_field">
+	<input type="submit" onclick="func33()"> -->
+
+	<!-- 4. Заключение -->
+	<!-- Поиск элементов по странице, который делает метод getElementById, является довольно медленной операцией (и вообще любая работа с элементами страницы - это медленная операция - запомните это).-->
+
+	<!-- В нашем случае, если мы каждый раз используем getElementById, то браузер каждый раз будет обрабатывать HTML страницу и искать элемент с заданным id несколько раз (не важно, что id одинаковые - браузер проделает все действия несколько раз), совершая бесполезные операции, которые могут замедлить работу браузера. -->
+
+	<!-- Если же мы используем переменную elem - никакого поиска по странице не происходит (элемент уже найден и ссылка на него лежит в переменной elem).  -->
+
+	<!-- 5. Исключения: атрибуты class и for -->
+	<!-- <input type="text" class="classA" id="test_classA">
+	<input type="submit" onclick="func50()"> -->
+
+	<!-- 6. Работа с this -->
+	<!-- 6.1 Вариант №1 -->	
+	<!-- <input type="submit" onclick="func61()" id="test1" value="input1">
+		 <input type="submit" onclick="func62()" id="test2" value="input2">
+		 <input type="submit" onclick="func63()" id="test3" value="input3"> -->
+	<!-- 
+	function func1() {
+		var elem = document.getElementById('test1');
+		alert(elem.value);
+	}
+
+	function func2() {
+		var elem = document.getElementById('test2');
+		alert(elem.value);
+	}
+
+	function func3() {
+		var elem = document.getElementById('test3');
+		alert(elem.value);
+	}
+ 	-->
+ 	<!-- Теперь ясно виден недостаток нашего подхода - для каждого инпута нам приходится создавать свою функцию обработки клика, причем делают эти функции практически одно и тоже. Если у нас будет 10 инпутов - то придется сделать 10 функций, не удобно. -->
+
+ 	<!-- 6.2 Вариант №2 -->
+ 	<!-- Давайте упростим нашу задачу: будем передавать параметром функции id текущего элемента. И вместо большого количества функций все сведется к одной функции: -->
+ 	<input type="submit" onclick="func64('test1')" id="test1" value="input1">
+	<input type="submit" onclick="func64('test2')" id="test2" value="input2">
+	<input type="submit" onclick="func64('test3')" id="test3" value="input3">
+
+</body>
+</html>
