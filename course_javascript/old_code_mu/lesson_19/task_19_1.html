@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Урок №19. Практика №1</title>
+	<script type="text/javascript" src="task_19_01.js"></script>
+</head>
+<body>
+	<h1>Задача №1. Алерт по нажатию на кнопку</h1> 
+	<!-- Вариант №1 -->
+	<button onclick="alert('Привет! Вариант 1')">Нажми меня 1</button>
+	<br>
+	<!-- Вариант №2 -->
+	<!-- <input type="submit" onclick="task_19_01()"> -->
+
+
+	<h1>Задача №2. Изменение текста в инпуте</h1> 
+	<button onclick="task_19_02()">Нажми меня 2</button>
+	<input type="text" id="input_19_02" value="???">
+	<br>
+
+
+	<h1>Задача №3. Вывод содержимого инпута</h1> 
+	<button onclick="task_19_03()">Нажми меня 3</button>
+	<input type="text" id="id_3_input" value="3 задача">
+	<br>
+
+	<h2>Задача №4. Квадрат содержимого инпута</h2>
+	<button onclick="task_19_04()">Нажми меня 4</button>
+	<input type="text" id="id_4_input" placeholder="Введите число!">
+
+	<h2>Задача №5. Обмен содержимым между инпутами</h2>
+	<button onclick="task_19_05()">Нажми меня 5</button>
+	<input type="text" id="id_5_1" value="3">
+	<input type="text" id="id_5_2" value="6">
+
+	<h2>Задача №6. По нажатию на кнопку меняется ее текст</h2>
+	<!-- Вариант №1 -->
+	<input type="button" onclick="buttonClick(this)" value="Нажми меня">
+	<!-- Вариант №2. Нельзя через button, тк нету значения value -->
+	<!-- <button onclick="buttonClick(this)" value="123123">Задача №6</button> -->
+
+	<h2>Задача №7. Работа с CSS. Поменять цвет</h2>
+	<button onclick="buttonClick7()">Поменять цвет</button>
+	<input type="text" id="id_7_input" value="77777543111">
+
+	<h2>Задача №8. Блокирование полей ввода</h2>
+	<button onclick="setBlock(true)">Заблокировать</button>
+	<button onclick="setBlock(false)">Разблокировать</button>
+	<input type="text" id='id_8_input' = value="888-88-2323">
+</body>
+</html>
