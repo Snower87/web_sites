@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Урок №19. Основы работы с DOM в JavaScript. Практика 2</title>
+	<script type="text/javascript" src="task_19_02.js"></script>
+	<script type="text/javascript">
+		function task19_02() {
+			alert('Привет. Задача №2');
+		}	
+
+		function task19_n(num) {
+			alert('Привет. Задача №' + num);
+		}			
+	</script>
+</head>
+<body>
+	<h1>Урок №19. Основы работы с DOM в JavaScript. Практика 2</h1>
+	<a href="attrs.html" target="_blank">Атрибуты для событий</a>
+	<h2>Задача №1. Функция alert. Событие onclick</h2>
+	<input type="submit" onclick="task19_01()" value="Нажми меня 1">
+
+	<h2>Задача №2. Событие onmousemove</h2>
+	<input type="submit" onmousemove="task19_02()" value="Нажми меня 2">
+
+	<h2>Задача №3. Событие ondblclick</h2>
+	<input type="submit" ondblclick="task19_n(3)" alue="Нажми меня дважды 3">
+
+	<h2>Задача №4. Событие onmouseout</h2>
+	<input type="submit" onmouseout="task19_n(4)" value="Наведи на меня 4">		
+
+	<h2>Задача №5. Отображение текста из input</h2>
+	<input type="text" id="input_text_5" value="Ку-ку">
+	<input type="submit" onclick="task19_5()" value="Нажми меня 5">		
+
+	<h2>Задача №6. Передача текста в input</h2>
+	<input type="text" id="input_text_6" value="Ку-ку6">
+	<input type="submit" onclick="task19_6()" value="Нажми на меня 6">
+
+	<h2>Задача №7. Передача по ссылке, через this</h2>
+	<input type="text" id="input_text_7" value="Ссылка 1" onclick="task19_7(this)">
+	<input type="submit" onclick="task19_7(this)" value="ПО ссылке 7">	
+</body>
+</html>

@@ -1,0 +1,3083 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Атрибуты для событий JavaScript | Трепачёв Дмитрий</title>
+		
+		<script src="http://old.code.mu/js/jquery/jquery.min.js?get=2"></script>
+		<script src="http://old.code.mu/js/activator/activator.js?get=3"></script>
+		
+		<link rel="stylesheet" href="http://old.code.mu/css/bootstrap/css/bootstrap.css?get=1">
+		<script src="http://old.code.mu/css/bootstrap/js/bootstrap.min.js?get=1"></script>
+		
+		<link rel="stylesheet" href="http://old.code.mu/css/layout.css?get=4">
+		<link rel="stylesheet" href="http://old.code.mu/css/styles.css?get=10">
+		<link rel="stylesheet" href="http://old.code.mu/css/classes.css?get=6">
+		
+		<meta name="description" content="Список атрибутов для событий JavaScript.">
+		<link href="../../favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+		<script src="http://old.code.mu/js/css/css.js?get=1"></script>
+		<script src="http://old.code.mu/js/answers/answers.js?get=5"></script>
+		<script src="http://old.code.mu/js/scripts/scripts.js?get=2"></script>
+		<script src="http://old.code.mu/js/mr-koder/mr-koder.js?get=3"></script>
+		
+		<link rel="stylesheet" href="http://old.code.mu/js/prism/prism.css?get=1">
+		<meta name="google-site-verification" content="Af0TM2OrwIEtjoQXxYz2-1C-21E1m7DB23_kWpE9sLg">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>
+				<div class="top">
+					<div class="top-left"><img data-module="mr-koder" data-behavior="img" src="../pages.html"></div>
+					<div class="top-right">Трепачёв Д.П. &copy; 2012-2023 г.</div>
+					<div class="top-center">
+						Старый сайт old.code.mu <span style="color: red;">скоро внезапно закроется</span>! Его материалы устарели!<br>
+						Переходите на новый сайт <a href="https://code.mu">code.mu</a>! На нем самая актуальная информация!
+					</div>
+				</div>
+				<div class="header">
+					<div class="top-menu">
+						<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="../../index.html">old.code.mu</a>
+		</div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li class="dropdown" data-module="activator" data-activate data-activate-folder="/css/, /pseudo/, /html/, /attr/, /php/, /sql/, /javascript/, /jquery/">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Справочники <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="http://code.mu/ru/markup/manual/html/">Справочник HTML5</a></li>
+						<li><a href="http://code.mu/ru/markup/manual/css/">Справочник CSS3</a></li>	
+						<li><a href="http://code.mu/ru/javascript/manual/">Справочник JavaScript</a></li>	
+						<li><a href="http://code.mu/ru/php/manual/">Справочник PHP</a></li>	
+						<li><a href="http://code.mu/ru/sql/manual/">Справочник SQL</a></li>	
+					</ul>
+				</li>
+				<li class="dropdown" data-module="activator" data-activate data-activate-folder="/books/">
+					<a href="#"  class="dropdown-toggle" data-toggle="dropdown">Учебники <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="http://code.mu/ru/markup/book/prime/">Основной учебник и задачник HTML CSS (на флексах)</a></li>
+						<li><a href="http://code.mu/ru/markup/book/supreme/">Высший учебник и задачник HTML CSS</a></li>
+						<li><a href="http://code.mu/ru/javascript/book/prime/">Основной учебник и задачник JavaScript (ES6)</a></li>
+						<li><a href="http://code.mu/ru/javascript/book/practice/">Учебник практики JavaScript</a></li>
+						<li><a href="http://code.mu/ru/javascript/book/supreme/">Высший учебник и задачник JavaScript</a></li>
+						<li><a href="http://code.mu/ru/php/book/prime/">Учебник по PHP 8</a></li>
+						<li><a href="http://code.mu/ru/php/book/oop/">Учебник по ООП и MVC на PHP</a></li>
+						<li><a href="http://code.mu/ru/javascript/nodejs/book/prime/">Учебник по NodeJS</a></li>
+						<li><a href="http://code.mu/ru/javascript/nodejs/book/express/">Учебник по Express</a></li>
+						<li><a href="http://code.mu/ru/javascript/framework/react/book/prime/">Учебник по фреймворку React</a></li>
+						
+						<li class="divider"></li>
+						
+						<li><a href="../../books/css/index.html" data-module="activator" data-activate data-activate-parent data-activate-folder>Устаревший учебник HTML+CSS для новичков</a></li>
+						<li><a href="../../books/javascript/index.html" data-module="activator" data-activate data-activate-parent data-activate-folder>Устаревший учебник JavaScript+jQuery для новичков</a></li>
+						<li><a href="../../books/php/index.html" data-module="activator" data-activate data-activate-parent data-activate-folder>Устаревший учебник PHP+SQL для новичков</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Видеоуроки <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="http://code.mu/ru/javascript/video/lesson/">Видеоуроки JavaScript</a></li>
+						<li><a href="http://code.mu/ru/php/video/lesson/">Видеоуроки PHP</a></li>	
+					</ul>
+				</li>
+				<li class="dropdown" data-module="activator" data-activate data-activate-folder="/tasks/">
+					<a href="#"  class="dropdown-toggle" data-toggle="dropdown">Устаревшие задачники <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="../../tasks/css/index.html" data-module="activator" data-activate data-activate-parent data-activate-folder>Устаревший задачник HTML+CSS с нуля</a></li>
+						<li><a href="../../tasks/javascript/index.html" data-module="activator" data-activate data-activate-parent data-activate-folder>Устаревший задачник JavaScript+jQuery с нуля</a></li>	
+						<li><a href="../../tasks/php/index.html" data-module="activator" data-activate data-activate-parent data-activate-folder>Устаревший задачник PHP+SQL с нуля</a></li>	
+					</ul>
+				</li>
+				<li class="dropdown" data-module="activator" data-activate data-activate-folder="/webinars/">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Вебинары<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="../../webinars/css/index.html" data-module="activator" data-activate data-activate-parent data-activate-folder>Бесплатные вебинары по HTML+CSS</a></li>
+						<li><a href="../../webinars/javascript/index.html" data-module="activator" data-activate data-activate-parent data-activate-folder>Бесплатные вебинары по JavaScript</a></li>
+						<li><a href="../../webinars/php/index.html" data-module="activator" data-activate data-activate-parent data-activate-folder>Бесплатные вебинары по PHP</a></li>
+					</ul>
+				</li>
+				<!--
+				<li class="dropdown" data-module="activator" data-activate data-activate-folder="/video/">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Видео<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="../../video/css/index.html" data-module="activator" data-activate data-activate-parent data-activate-folder>Видео HTML+CSS</a></li>
+						<li><a href="../../video/javascript/index.html" data-module="activator" data-activate data-activate-parent data-activate-folder>Видео JavaScript</a></li>
+						<li><a href="../../video/php/index.html" data-module="activator" data-activate data-activate-parent data-activate-folder>Видео PHP</a></li>
+					</ul>
+				</li>
+				-->
+				<!--
+				<li class="dropdown" data-module="activator" data-activate data-activate-folder="/recipes/">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Рецепты<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="../../recipes/css/index.html" data-module="activator" data-activate data-activate-parent data-activate-folder>Рецепты HTML+CSS</a></li>
+						<li><a href="../../recipes/javascript/index.html" data-module="activator" data-activate data-activate-parent data-activate-folder>Рецепты JavaScript</a></li>
+						<li><a href="../../recipes/php/index.html" data-module="activator" data-activate data-activate-parent data-activate-folder>Рецепты PHP</a></li>
+					</ul>
+				</li>
+				<li class="dropdown" data-module="activator" data-activate data-activate-folder="/faq/">
+					<a href="#"  class="dropdown-toggle" data-toggle="dropdown">FAQ<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="../../faq/css/index.html" data-module="activator" data-activate data-activate-parent data-activate-folder>FAQ HTML+CSS</a></li>
+					</ul>
+				</li>
+				-->
+				<li class="dropdown" data-module="activator" data-activate data-activate-folder="/textbooks/">
+					<a href="../../textbooks/index.html">Книги</a>
+				</li>
+			</ul>
+			<!--
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<form action="http://www.yandex.ru/yandsearch" target="_blank" class="navbar-form" role="search">
+						<input type="text" class="form-control" style="width: 150px;" placeholder="Поиск (исправлен)" name="text">
+						<input type="hidden" value="code.mu" name="site">
+						<button type="submit" class="btn btn-default">Найти</button>
+					</form>
+				</li>
+			</ul>
+			-->
+		</div>
+	</div>
+</nav>					</div>
+					
+					<div class="sub-menu" style="margin-bottom: -40px">
+						<div>
+							информация о бесплатных мероприятиях теперь только на новом сайте <a href="http://code.mu">code.mu</a>
+						</div>
+					</div>
+				</div> 
+			</header>
+			<div class="h1-block">
+					<a href="../timer/clearTimeout.html" class="prev">&#9668;</a>
+	<a href="dom-element.html" class="next">&#9658;</a>
+
+				<h1>Атрибуты для событий</h1>
+							</div>
+			<aside>
+				<div class="sidebars">
+					<div class="left sidebar">
+						<div>
+	<h2>Строки</h2>
+	<ul>
+		<li>
+			<a href="../string/length.html" data-module="activator" data-activate>                   
+				length <br><span class="menu-hint">длина строки</span>
+			</a>
+		</li>
+		<li>
+			<a href="../string/toLowerCase.html" data-module="activator" data-activate>                   
+				toLowerCase <br><span class="menu-hint">нижний регистр</span>
+			</a>
+		</li>
+		<li>
+			<a href="../string/toUpperCase.html" data-module="activator" data-activate>                   
+				toUpperCase <br><span class="menu-hint">верхний регистр</span>
+			</a>
+		</li>
+		<li>
+			<a href="../string/split.html" data-module="activator" data-activate>                   
+				split <br><span class="menu-hint">разбиение строки на массив</span>
+			</a>
+		</li>
+		<li>
+			<a href="../string/substr.html" data-module="activator" data-activate>                   
+				substr <br><span class="menu-hint">вырезание подстроки</span>
+			</a>
+		</li>
+		<li>
+			<a href="../string/substring.html" data-module="activator" data-activate>                   
+				substring <br><span class="menu-hint">вырезание подстроки</span>
+			</a>
+		</li>
+		<li>
+			<a href="../string/slice.html" data-module="activator" data-activate>                   
+				slice <br><span class="menu-hint">вырезание подстроки</span>
+			</a>
+		</li>
+		<li>
+			<a href="../string/concat.html" data-module="activator" data-activate>                   
+				concat <br><span class="menu-hint">объединение строк</span>
+			</a>
+		</li>
+		<li>
+			<a href="../string/indexOf.html" data-module="activator" data-activate>                   
+				indexOf <br><span class="menu-hint">поиск совпадений с начала</span>
+			</a>
+		</li>
+		<li>
+			<a href="../string/lastIndexOf.html" data-module="activator" data-activate>                   
+				lastIndexOf <br><span class="menu-hint">поиск совпадений с конца</span>
+			</a>
+		</li>
+		<li>
+			<a href="../string/replace.html" data-module="activator" data-activate>                   
+				replace <br><span class="menu-hint">замена текста в строке</span>
+			</a>
+		</li>
+		<li>
+			<a href="../string/charAt.html" data-module="activator" data-activate>                   
+				charAt <br><span class="menu-hint">символ строки</span>
+			</a>
+		</li>
+		<li>
+			<a href="../string/charCodeAt.html" data-module="activator" data-activate>                   
+				charCodeAt <br><span class="menu-hint">символ по его коду</span>
+			</a>
+		</li>
+		<li>
+			<a href="../string/String.fromCharCode.html" data-module="activator" data-activate>                   
+				String.fromCharCode <br><span class="menu-hint">код символа</span>
+			</a>
+		</li>
+		<li>
+			<a href="../string/trim.html" data-module="activator" data-activate>                   
+				trim <br><span class="menu-hint">удаление пробелов по краям</span>
+			</a>
+		</li>
+		<li>
+			<a href="../string/localeCompare.html" data-module="activator" data-activate>                   
+				localeCompare <br><span class="menu-hint">сравнение строк</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<div>
+	<h2>Массивы</h2>
+	<ul>
+		<li>
+			<a href="../array/length.html" data-module="activator" data-activate>                   
+				length <br><span class="menu-hint">длина массива</span>
+			</a>
+		</li>
+		<li>
+			<a href="../array/concat.html" data-module="activator" data-activate>                   
+				concat <br><span class="menu-hint">слияние массивов вместе</span>
+			</a>
+		</li>
+		<li>
+			<a href="../array/join.html" data-module="activator" data-activate>                   
+				join <br><span class="menu-hint">слияние массива в строку</span>
+			</a>
+		</li>
+		<li>
+			<a href="../array/reverse.html" data-module="activator" data-activate>                   
+				reverse <br><span class="menu-hint">переворот массива</span>
+			</a>
+		</li>
+		<li>
+			<a href="../array/slice.html" data-module="activator" data-activate>                   
+				slice <br><span class="menu-hint">отрезание части массива</span>
+			</a>
+		</li>
+		<li>
+			<a href="../array/splice.html" data-module="activator" data-activate>                   
+				splice <br><span class="menu-hint">отрезание части массива</span>
+			</a>
+		</li>
+		<li>
+			<a href="../array/shift.html" data-module="activator" data-activate>                   
+				shift <br><span class="menu-hint">удаление первого элемента</span>
+			</a>
+		</li>
+		<li>
+			<a href="../array/pop.html" data-module="activator" data-activate>                   
+				pop <br><span class="menu-hint">удаление последнего элемента</span>
+			</a>
+		</li>
+		<li>
+			<a href="../array/unshift.html" data-module="activator" data-activate>                   
+				unshift <br><span class="menu-hint">добавление элементов в начало</span>
+			</a>
+		</li>
+		<li>
+			<a href="../array/push.html" data-module="activator" data-activate>                   
+				push <br><span class="menu-hint">добавление элементов в конец</span>
+			</a>
+		</li>
+		<li>
+			<a href="../array/sort.html" data-module="activator" data-activate>                   
+				sort <br><span class="menu-hint">сортировка массива</span>
+			</a>
+		</li>
+		<li>
+			<a href="../array/forEach.html" data-module="activator" data-activate>                   
+				forEach <br><span class="menu-hint">перебор массива</span>
+			</a>
+		</li>
+		<li>
+			<a href="../array/filter.html" data-module="activator" data-activate>                   
+				filter <br><span class="menu-hint">фильтрация массива</span>
+			</a>
+		</li>
+		<li>
+			<a href="../array/map.html" data-module="activator" data-activate>                   
+				map <br><span class="menu-hint">трансформация массива</span>
+			</a>
+		</li>
+		<li>
+			<a href="../array/every.html" data-module="activator" data-activate>                   
+				every <br><span class="menu-hint">все в массиве</span>
+			</a>
+		</li>
+		<li>
+			<a href="../array/some.html" data-module="activator" data-activate>                   
+				some <br><span class="menu-hint">хотя бы один в массиве</span>
+			</a>
+		</li>
+		<li>
+			<a href="../array/reduce.html" data-module="activator" data-activate>                   
+				reduce <br><span class="menu-hint">свертка к значению</span>
+			</a>
+		</li>
+		<li>
+			<a href="../array/reduceRight.html" data-module="activator" data-activate>                   
+				reduceRight <br><span class="menu-hint">свертка к значению</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<div>
+	<h2>Date</h2>
+	<ul>
+		<li>
+			<a href="../date/Date.html" data-module="activator" data-activate>                   
+				Date <br><span class="menu-hint">объект для работы даты</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/getFullYear.html" data-module="activator" data-activate>                   
+				getFullYear <br><span class="menu-hint">год (4 цифры)</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/getYear.html" data-module="activator" data-activate>                   
+				getYear <br><span class="menu-hint">год (2 цифры)</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/getMonth.html" data-module="activator" data-activate>                   
+				getMonth <br><span class="menu-hint">месяц</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/getDate.html" data-module="activator" data-activate>                   
+				getDate <br><span class="menu-hint">день месяца</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/getHours.html" data-module="activator" data-activate>                   
+				getHours <br><span class="menu-hint">часы</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/getMinutes.html" data-module="activator" data-activate>                   
+				getMinutes <br><span class="menu-hint">минуты</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/getSeconds.html" data-module="activator" data-activate>                   
+				getSeconds <br><span class="menu-hint">секунды</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/getMilliseconds.html" data-module="activator" data-activate>                   
+				getMilliseconds <br><span class="menu-hint">миллисекунды</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/getDay.html" data-module="activator" data-activate>                   
+				getDay <br><span class="menu-hint">день недели</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/getTime.html" data-module="activator" data-activate>                   
+				getTime <br><span class="menu-hint">дата в миллисекундах</span>
+			</a>
+		</li>
+				<li>
+			<a href="../date/setFullYear.html" data-module="activator" data-activate>                   
+				setFullYear <br><span class="menu-hint">установка года</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/setMonth.html" data-module="activator" data-activate>                   
+				setMonth <br><span class="menu-hint">установка месяца</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/setDate.html" data-module="activator" data-activate>                   
+				setDate <br><span class="menu-hint">установка дня месяца</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/setHours.html" data-module="activator" data-activate>                   
+				setHours <br><span class="menu-hint">установка часа</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/setMinutes.html" data-module="activator" data-activate>                   
+				setMinutes <br><span class="menu-hint">установка минуты</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/setSeconds.html" data-module="activator" data-activate>                   
+				setSeconds <br><span class="menu-hint">установка секунды</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/setMilliseconds.html" data-module="activator" data-activate>                   
+				setMilliseconds <br><span class="menu-hint">установка миллисекунды</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/now.html" data-module="activator" data-activate>                   
+				now <br><span class="menu-hint">текущая дата в миллисекундах</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/getTimezoneOffset.html" data-module="activator" data-activate>                   
+				getTimezoneOffset <br><span class="menu-hint">смещение времени</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/toTimeString.html" data-module="activator" data-activate>                   
+				toTimeString <br><span class="menu-hint">преобразование времени в строку</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/toDateString.html" data-module="activator" data-activate>                   
+				toDateString <br><span class="menu-hint">преобразование даты в строку</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/toISOString.html" data-module="activator" data-activate>                   
+				toISOString <br><span class="menu-hint">дата в формате ISO</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/toUTCString.html" data-module="activator" data-activate>                   
+				toUTCString <br><span class="menu-hint">дата в формате GMT</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/toLocaleString.html" data-module="activator" data-activate>                   
+				toLocaleString <br><span class="menu-hint">форматирование даты</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/Date.parse.html" data-module="activator" data-activate>                   
+				Date.parse <br><span class="menu-hint">дата из строки</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<div>
+	<h2>Math</h2>
+	<ul>
+		<li>
+			<a href="../math/Math.random.html" data-module="activator" data-activate>                   
+				Math.random <br><span class="menu-hint">случайное число</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/Math.round.html" data-module="activator" data-activate>                   
+				Math.round <br><span class="menu-hint">округление числа</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/Math.ceil.html" data-module="activator" data-activate>                   
+				Math.ceil <br><span class="menu-hint">округление в большую сторону</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/Math.floor.html" data-module="activator" data-activate>                   
+				Math.floor <br><span class="menu-hint">округление в меньшую сторону</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/toFixed.html" data-module="activator" data-activate>                   
+				toFixed <br><span class="menu-hint">округление числа</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/toPrecision.html" data-module="activator" data-activate>                   
+				toPrecision <br><span class="menu-hint">округление числа</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/Math.sqrt.html" data-module="activator" data-activate>                   
+				Math.sqrt <br><span class="menu-hint">квадратный корень числа</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/Math.pow.html" data-module="activator" data-activate>                   
+				Math.pow <br><span class="menu-hint">степень числа</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/Math.max.html" data-module="activator" data-activate>                   
+				Math.max <br><span class="menu-hint">максимальное число</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/Math.min.html" data-module="activator" data-activate>                   
+				Math.min <br><span class="menu-hint">минимальное число</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/Math.abs.html" data-module="activator" data-activate>                   
+				Math.abs <br><span class="menu-hint">модуль числа</span>
+			</a>
+		</li>
+		
+		<li>
+			<a href="../math/isFinite.html" data-module="activator" data-activate>                   
+				isFinite <br><span class="menu-hint">проверка на конечное число</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/isNaN.html" data-module="activator" data-activate>                   
+				isNaN <br><span class="menu-hint">проверка на NaN</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/parseInt.html" data-module="activator" data-activate>                   
+				parseInt <br><span class="menu-hint">строка в число</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/parseFloat.html" data-module="activator" data-activate>                   
+				parseFloat <br><span class="menu-hint">строка в дробь</span>
+			</a>
+		</li>
+		
+		
+		<li>
+			<a href="../math/Math.sin.html" data-module="activator" data-activate>                   
+				Math.sin <br><span class="menu-hint">синус числа</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/Math.cos.html" data-module="activator" data-activate>                   
+				Math.cos <br><span class="menu-hint">косинус числа</span>
+			</a>
+		</li>
+		
+		<li>
+			<a href="../math/Math.tan.html" data-module="activator" data-activate>                   
+				Math.tan <br><span class="menu-hint">тангенс угла</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/Math.asin.html" data-module="activator" data-activate>                   
+				Math.asin <br><span class="menu-hint">арксинус числа</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/Math.acos.html" data-module="activator" data-activate>                   
+				Math.acos <br><span class="menu-hint">арккосинус числа</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/Math.atan.html" data-module="activator" data-activate>                   
+				Math.atan <br><span class="menu-hint">арктангенс числа </span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/Math.exp.html" data-module="activator" data-activate>                   
+				Math.exp <br><span class="menu-hint">экспонента</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/Math.log.html" data-module="activator" data-activate>                   
+				Math.log <br><span class="menu-hint">натуральный логарифм</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/toExponential.html" data-module="activator" data-activate>                   
+				toExponential <br><span class="menu-hint">экспоненциальная нотация</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<div>
+	<h2>Математические константы</h2>
+	<ul>
+		<li>
+			<a href="../math/Number.NaN.html" data-module="activator" data-activate>                   
+				Number.NaN <br><span class="menu-hint">Not-A-Number</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/Number.NEGATIVE_INFINITY.html" data-module="activator" data-activate>                   
+				Number.NEGATIVE_INFINITY <br><span class="menu-hint">минус бесконечность</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/Number.POSITIVE_INFINITY.html" data-module="activator" data-activate>                   
+				Number.POSITIVE_INFINITY <br><span class="menu-hint">плюс бесконечность</span>
+			</a>
+		</li>
+		
+		<li>
+			<a href="../math/Math.E.html" data-module="activator" data-activate>                   
+				Math.E <br><span class="menu-hint">значение экспоненты</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/Math.LN2.html" data-module="activator" data-activate>                   
+				Math.LN2 <br><span class="menu-hint">натуральный логарифм 2-х</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/Math.LN10.html" data-module="activator" data-activate>                   
+				Math.LN10 <br><span class="menu-hint">натуральный логарифм 10-ти</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/Math.LOG2E.html" data-module="activator" data-activate>                   
+				Math.LOG2E <br><span class="menu-hint">логарифм от e по основанию 2</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/Math.LOG10E.html" data-module="activator" data-activate>                   
+				Math.LOG10E <br><span class="menu-hint">логарифм от e по основанию 10</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/Math.PI.html" data-module="activator" data-activate>                   
+				Math.PI <br><span class="menu-hint">число Пи</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/Math.SQRT1_2.html" data-module="activator" data-activate>                   
+				Math.SQRT1_2 <br><span class="menu-hint">квадратный корень из 1/2</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/Math.SQRT2.html" data-module="activator" data-activate>                   
+				Math.SQRT2 <br><span class="menu-hint">квадратный корень из 2</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<div>
+	<h2>Специальные значения</h2>
+	<ul>
+		<li>
+			<a href="../lang/true.html" data-module="activator" data-activate>                   
+				true <br><span class="menu-hint">истина</span>
+			</a>
+		</li>
+		<li>
+			<a href="../lang/false.html" data-module="activator" data-activate>                   
+				false <br><span class="menu-hint">ложь</span>
+			</a>
+		</li>
+		<li>
+			<a href="../lang/NaN.html" data-module="activator" data-activate>                   
+				NaN <br><span class="menu-hint">не число</span>
+			</a>
+		</li>
+		<li>
+			<a href="../lang/null.html" data-module="activator" data-activate>                   
+				null <br><span class="menu-hint">ничего</span>
+			</a>
+		</li>
+		<li>
+			<a href="../lang/undefined.html" data-module="activator" data-activate>                   
+				undefined <br><span class="menu-hint">неопределенность</span>
+			</a>
+		</li>
+		<li>
+			<a href="../lang/Infinity.html" data-module="activator" data-activate>                   
+				Infinity <br><span class="menu-hint">бесконечность</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<div>
+	<h2>Url кодирование</h2>
+	<ul>
+		<li>
+			<a href="../url/decodeURI.html" data-module="activator" data-activate>                   
+				decodeURI <br><span class="menu-hint">декодирование URL</span>
+			</a>
+		</li>
+		<li>
+			<a href="../url/decodeURIComponent.html" data-module="activator" data-activate>                   
+				decodeURIComponent <br><span class="menu-hint">декодирование URL</span>
+			</a>
+		</li>
+		<li>
+			<a href="../url/encodeURI.html" data-module="activator" data-activate>                   
+				encodeURI <br><span class="menu-hint">кодирование URL</span>
+			</a>
+		</li>
+		<li>
+			<a href="../url/encodeURIComponent.html" data-module="activator" data-activate>                   
+				encodeURIComponent <br><span class="menu-hint">кодирование компонентов URI</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<div>
+	<h2>Диалоговые окошки</h2>
+	<ul>
+		<li>
+			<a href="../dialog/alert.html" data-module="activator" data-activate>                   
+				alert <br><span class="menu-hint">окно для сообщения</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dialog/confirm.html" data-module="activator" data-activate>                   
+				confirm <br><span class="menu-hint">окно для подтверждения</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dialog/prompt.html" data-module="activator" data-activate>                   
+				prompt <br><span class="menu-hint">окно для ввода данных</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<div>
+	<h2>Типизация</h2>
+	<ul>
+		<li>
+			<a href="../lang/typeof.html" data-module="activator" data-activate>                   
+				typeof <br><span class="menu-hint">тип переменной</span>
+			</a>
+		</li>
+		<li>
+			<a href="../lang/Number.html" data-module="activator" data-activate>                   
+				Number <br><span class="menu-hint">преобразование к числу</span>
+			</a>
+		</li>
+		<li>
+			<a href="../lang/String.html" data-module="activator" data-activate>                   
+				String <br><span class="menu-hint">преобразование к строке</span>
+			</a>
+		</li>
+		<li>
+			<a href="../lang/Boolean.html" data-module="activator" data-activate>                   
+				Boolean <br><span class="menu-hint">преобразование к boolean</span>
+			</a>
+		</li>
+	</ul>
+</div>
+
+<div>
+	<h2>Таймеры</h2>
+	<ul>
+		<li>
+			<a href="../timer/setInterval.html" data-module="activator" data-activate>                   
+				setInterval <br><span class="menu-hint">таймер выполнения кода</span>
+			</a>
+		</li>
+		<li>
+			<a href="../timer/setTimeout.html" data-module="activator" data-activate>                   
+				setTimeout <br><span class="menu-hint">пауза при выполнении кода</span>
+			</a>
+		</li>
+		<li>
+			<a href="../timer/clearInterval.html" data-module="activator" data-activate>                   
+				clearInterval <br><span class="menu-hint">сброс таймера</span>
+			</a>
+		</li>
+		<li>
+			<a href="../timer/clearTimeout.html" data-module="activator" data-activate>                   
+				clearTimeout <br><span class="menu-hint">сброс паузы</span>
+			</a>
+		</li>
+	</ul>
+</div>					</div>
+					<div class="right sidebar">
+						﻿<div>
+	<h2>Разное</h2>
+	<ul>
+		<li>
+			<a href="attrs.html" data-module="activator" data-activate>                   
+				Атрибуты событий <br><span class="menu-hint">таблица с описанием</span>
+			</a>
+		</li>
+		<li>
+			<a href="dom-element.html" data-module="activator" data-activate>                   
+				DOM элемент <br><span class="menu-hint">что это такое</span>
+			</a>
+		</li>
+		<li>
+			<a href="pseudo-array.html" data-module="activator" data-activate>                   
+				Псевдомассив / коллекция <br><span class="menu-hint">особенности работы</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<div>
+	<h2>Работа с DOM</h2>
+	<ul>
+		<li>
+			<a href="../dom/getElementById.html" data-module="activator" data-activate>                   
+				getElementById <br><span class="menu-hint">элемент по id</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/getElementsByTagName.html" data-module="activator" data-activate>                   
+				getElementsByTagName <br><span class="menu-hint">элементы по тегу</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/getElementsByClassName.html" data-module="activator" data-activate>                   
+				getElementsByClassName <br><span class="menu-hint">элементы по классу</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/querySelector.html" data-module="activator" data-activate>                   
+				querySelector <br><span class="menu-hint">элементы по селектору</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/querySelectorAll.html" data-module="activator" data-activate>                   
+				querySelectorAll <br><span class="menu-hint">элементы по селектору</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/matches.html" data-module="activator" data-activate>                   
+				matches <br><span class="menu-hint">соответствие селектору</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/closest.html" data-module="activator" data-activate>                   
+				closest <br><span class="menu-hint">родитель по селектору</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/contains.html" data-module="activator" data-activate>                   
+				contains <br><span class="menu-hint">проверка на вложенность</span>
+			</a>
+		</li>
+		
+		<li>
+			<a href="../dom/document.html" data-module="activator" data-activate>                   
+				document <br><span class="menu-hint">объект страница</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<div>
+	<h2>Работа с DOM</h2>
+	<ul>
+		<li>
+			<a href="../dom/innerHTML.html" data-module="activator" data-activate>                   
+				innerHTML <br><span class="menu-hint">текст элемента</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/getAttribute.html" data-module="activator" data-activate>                   
+				getAttribute <br><span class="menu-hint">получение атрибутов элемента</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/setAttribute.html" data-module="activator" data-activate>                   
+				setAttribute <br><span class="menu-hint">изменение атрибутов элемента</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/removeAttribute.html" data-module="activator" data-activate>                   
+				removeAttribute <br><span class="menu-hint">удаление атрибутов элемента</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/hasAttribute.html" data-module="activator" data-activate>                   
+				hasAttribute <br><span class="menu-hint">проверка наличия атрибута</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/classList.html" data-module="activator" data-activate>                   
+				classList <br><span class="menu-hint">работа с классами</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/dataset.html" data-module="activator" data-activate>                   
+				dataset <br><span class="menu-hint">атрибуты data-</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/cssText.html" data-module="activator" data-activate>                   
+				cssText <br><span class="menu-hint">стиль 1 строкой</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/getComputedStyle.html" data-module="activator" data-activate>                   
+				getComputedStyle <br><span class="menu-hint">стиль из CSS</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<div>
+	<h2>Элементы DOM</h2>
+	<ul>
+		<li>
+			<a href="../dom/tagName.html" data-module="activator" data-activate>                   
+				tagName <br><span class="menu-hint">название тега</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/children.html" data-module="activator" data-activate>                   
+				children <br><span class="menu-hint">все потомки элемента</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/firstElementChild.html" data-module="activator" data-activate>                   
+				firstElementChild <br><span class="menu-hint">первый потомок</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/lastElementChild.html" data-module="activator" data-activate>                   
+				lastElementChild <br><span class="menu-hint">последний потомок</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/previousElementSibling.html" data-module="activator" data-activate>                   
+				previousElementSibling <br><span class="menu-hint">следующий элемент</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/nextElementSibling.html" data-module="activator" data-activate>                   
+				nextElementSibling <br><span class="menu-hint">предыдущий элемент</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/parentElement.html" data-module="activator" data-activate>                   
+				parentElement <br><span class="menu-hint">родительский элемент</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<div>
+	<h2>Узлы nodes</h2>
+	<ul>
+		<li>
+			<a href="../dom/childNodes.html" data-module="activator" data-activate>                   
+				childNodes <br><span class="menu-hint">дочерние узлы</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/firstChild.html" data-module="activator" data-activate>                   
+				firstChild <br><span class="menu-hint">первый потомок узел</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/lastChild.html" data-module="activator" data-activate>                   
+				lastChild <br><span class="menu-hint">последний потомок узел</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/parentNode.html" data-module="activator" data-activate>                   
+				parentNode <br><span class="menu-hint">родительский узел</span>
+			</a>
+		</li>
+		<!--
+		<li>
+			<a href="../dom/nodeValue.html" data-module="activator" data-activate>                   
+				nodeValue <br><span class="menu-hint">значение узла</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/data.html" data-module="activator" data-activate>                   
+				data <br><span class="menu-hint">значение узла</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/textContent.html" data-module="activator" data-activate>                   
+				textContent <br><span class="menu-hint">текст без тегов</span>
+			</a>
+		</li>
+		-->
+	</ul>
+</div>
+<div>
+	<h2>Вставка элементов</h2>
+	<ul>
+		<li>
+			<a href="../dom/createElement.html" data-module="activator" data-activate>                   
+				createElement <br><span class="menu-hint">создание элемента</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/appendChild.html" data-module="activator" data-activate>                   
+				appendChild <br><span class="menu-hint">вставка в конец</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/insertBefore.html" data-module="activator" data-activate>                   
+				insertBefore <br><span class="menu-hint">вставка перед</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/cloneNode.html" data-module="activator" data-activate>                   
+				cloneNode <br><span class="menu-hint">клонирование узлов</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/removeChild.html" data-module="activator" data-activate>                   
+				removeChild <br><span class="menu-hint">удаление узлов</span>
+			</a>
+		</li>			
+		<li>
+			<a href="../dom/insertAdjacentHTML.html" data-module="activator" data-activate>                   
+				insertAdjacentHTML <br><span class="menu-hint">вставка HTML кода</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<div>
+	<h2>События</h2>
+	<ul>
+		<li>
+			<a href="../event/addEventListener.html" data-module="activator" data-activate>                   
+				addEventListener <br><span class="menu-hint">привязка событий</span>
+			</a>
+		</li>
+		<li>
+			<a href="../event/removeEventListener.html" data-module="activator" data-activate>                   
+				removeEventListener <br><span class="menu-hint">удаление событий</span>
+			</a>
+		</li>
+		<li>
+			<a href="../event/Event.html" data-module="activator" data-activate>                   
+				Event <br><span class="menu-hint">конструктор событий</span>
+			</a>
+		</li>
+		<li>
+			<a href="../event/dispatchEvent.html" data-module="activator" data-activate>                   
+				dispatchEvent <br><span class="menu-hint">имитация события</span>
+			</a>
+		</li>
+		<li>
+			<a href="../event/focus.html" data-module="activator" data-activate>                   
+				focus <br><span class="menu-hint">установить фокус</span>
+			</a>
+		</li>
+		<li>
+			<a href="../event/blur.html" data-module="activator" data-activate>                   
+				blur <br><span class="menu-hint">снять фокус</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<div>
+	<h2>Объект события</h2>
+	<ul>
+		<li>
+			<a href="../event/type.html" data-module="activator" data-activate>                   
+				type <br><span class="menu-hint">тип события</span>
+			</a>
+		</li>
+		<li>
+			<a href="../event/target.html" data-module="activator" data-activate>                   
+				target <br><span class="menu-hint">элемент, на котором <br> событие сработало</span>
+			</a>
+		</li>
+		<li>
+			<a href="../event/currentTarget.html" data-module="activator" data-activate>                   
+				currentTarget <br><span class="menu-hint">элемент, на который <br> назначили событие</span>
+			</a>
+		</li>
+		<li>
+			<a href="../event/preventDefault.html" data-module="activator" data-activate>                   
+				preventDefault <br><span class="menu-hint">отмена действия по умолчанию</span>
+			</a>
+		</li>
+		<li>
+			<a href="../event/isTrusted.html" data-module="activator" data-activate>                   
+				isTrusted <br><span class="menu-hint">настоящее ли событие</span>
+			</a>
+		</li>
+		<li>
+			<a href="../event/ctrlKey.html" data-module="activator" data-activate>                   
+				ctrlKey <br><span class="menu-hint">нажат ли Ctrl</span>
+			</a>
+		</li>
+		<li>
+			<a href="../event/altKey.html" data-module="activator" data-activate>                   
+				altKey <br><span class="menu-hint">нажат ли Alt</span>
+			</a>
+		</li>
+		<li>
+			<a href="../event/shiftKey.html" data-module="activator" data-activate>                   
+				shiftKey <br><span class="menu-hint">нажат ли Shift</span>
+			</a>
+		</li>
+		<li>
+			<a href="../event/metaKey.html" data-module="activator" data-activate>                   
+				metaKey <br><span class="menu-hint">нажат ли Cmd</span>
+			</a>
+		</li>
+		<li>
+			<a href="../event/clientX.html" data-module="activator" data-activate>                   
+				clientX <br><span class="menu-hint">координаты мыши</span>
+			</a>
+		</li>
+		<li>
+			<a href="../event/clientY.html" data-module="activator" data-activate>                   
+				clientY <br><span class="menu-hint">координаты мыши</span>
+			</a>
+		</li>
+		<li>
+			<a href="../event/pageX.html" data-module="activator" data-activate>                   
+				pageX <br><span class="menu-hint">координаты мыши</span>
+			</a>
+		</li>
+		<li>
+			<a href="../event/pageY.html" data-module="activator" data-activate>                   
+				pageY <br><span class="menu-hint">координаты мыши</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<div>
+	<h2>Выделение</h2>
+	<ul>
+		<li>
+			<a href="../dom/getSelection.html" data-module="activator" data-activate>                   
+				getSelection <br><span class="menu-hint">выделение текста</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/createRange.html" data-module="activator" data-activate>                   
+				createRange <br><span class="menu-hint">фрагмент документа</span>
+			</a>
+		</li>
+	</ul>
+</div>	
+<div>
+	<h2>Метрики и прокрутка</h2>
+	<ul>
+		<li>
+			<a href="../metric/offsetParent.html" data-module="activator" data-activate>                   
+				offsetParent <br><span class="menu-hint">родитель с позиционированием</span>
+			</a>
+		</li>
+		<li>
+			<a href="../metric/offsetTop.html" data-module="activator" data-activate>                   
+				offsetTop <br><span class="menu-hint">смещение сверху</span>
+			</a>
+		</li>
+		<li>
+			<a href="../metric/offsetLeft.html" data-module="activator" data-activate>                   
+				offsetLeft <br><span class="menu-hint">смещение слева</span>
+			</a>
+		</li>
+		<li>
+			<a href="../metric/offsetWidth.html" data-module="activator" data-activate>                   
+				offsetWidth <br><span class="menu-hint">полная ширина</span>
+			</a>
+		</li>
+		<li>
+			<a href="../metric/offsetHeight.html" data-module="activator" data-activate>                   
+				offsetHeight <br><span class="menu-hint">полная высота</span>
+			</a>
+		</li>
+		<li>
+			<a href="../metric/clientLeft.html" data-module="activator" data-activate>                   
+				clientLeft <br><span class="menu-hint">левая граница</span>
+			</a>
+		</li>
+		<li>
+			<a href="../metric/clientTop.html" data-module="activator" data-activate>                   
+				clientTop <br><span class="menu-hint">верхняя граница</span>
+			</a>
+		</li>
+		<li>
+			<a href="../metric/clientWidth.html" data-module="activator" data-activate>                   
+				clientWidth <br><span class="menu-hint">ширина содержимого</span>
+			</a>
+		</li>
+		<li>
+			<a href="../metric/clientHeight.html" data-module="activator" data-activate>                   
+				clientHeight <br><span class="menu-hint">высота содержимого</span>
+			</a>
+		</li>
+		<li>
+			<a href="../metric/scrollWidth.html" data-module="activator" data-activate>                   
+				scrollWidth <br><span class="menu-hint">ширина с прокруткой</span>
+			</a>
+		</li>
+		<li>
+			<a href="../metric/scrollHeight.html" data-module="activator" data-activate>                   
+				scrollHeight <br><span class="menu-hint">высота с прокруткой</span>
+			</a>
+		</li>
+		<li>
+			<a href="../metric/scrollLeft.html" data-module="activator" data-activate>                   
+				scrollLeft <br><span class="menu-hint">горизонтальная прокрутка</span>
+			</a>
+		</li>
+		<li>
+			<a href="../metric/scrollTop.html" data-module="activator" data-activate>                   
+				scrollTop <br><span class="menu-hint">вертикальная прокрутка</span>
+			</a>
+		</li>
+		<li>
+			<a href="../metric/scrollBy.html" data-module="activator" data-activate>                   
+				scrollBy <br><span class="menu-hint">прокрутка страницы</span>
+			</a>
+		</li>
+		<li>
+			<a href="../metric/scrollTo.html" data-module="activator" data-activate>                   
+				scrollTo <br><span class="menu-hint">прокрутка страницы</span>
+			</a>
+		</li>
+		<li>
+			<a href="../metric/scrollIntoView.html" data-module="activator" data-activate>                   
+				scrollIntoView <br><span class="menu-hint">прокрутить до видимости</span>
+			</a>
+		</li>
+		<li>
+			<a href="../metric/getBoundingClientRect.html" data-module="activator" data-activate>                   
+				getBoundingClientRect <br><span class="menu-hint">координаты элемента</span>
+			</a>
+		</li>
+		<li>
+			<a href="../metric/elementFromPoint.html" data-module="activator" data-activate>                   
+				elementFromPoint <br><span class="menu-hint">элемент на координатах</span>
+			</a>
+		</li>
+		<li>
+			<a href="../metric/pageXOffset.html" data-module="activator" data-activate>                   
+				pageXOffset <br><span class="menu-hint">горизонтальная <br> прокрутка документа</span>
+			</a>
+		</li>
+		<li>
+			<a href="../metric/pageYOffset.html" data-module="activator" data-activate>                   
+				pageYOffset <br><span class="menu-hint">вертикальная <br> прокрутка документа</span>
+			</a>
+		</li>
+		
+	</ul>
+</div>
+<div>
+	<h2>Таблицы</h2>
+	<ul>
+		<li>
+			<a href="../dom/tHead.html" data-module="activator" data-activate>                   
+				tHead <br><span class="menu-hint">tHead таблицы</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/tFoot.html" data-module="activator" data-activate>                   
+				tFoot <br><span class="menu-hint">tFoot таблицы</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/tBodyes.html" data-module="activator" data-activate>                   
+				tBodyes <br><span class="menu-hint">tBody таблицы</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/rows.html" data-module="activator" data-activate>                   
+				rows <br><span class="menu-hint">массив строк TR</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/cells.html" data-module="activator" data-activate>                   
+				cells <br><span class="menu-hint">Массив ячеек TD/TH</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<div>
+	<h2>Конструкции языка</h2>
+	<ul>
+		<li>
+			<a href="../lang/if.html" data-module="activator" data-activate>                   
+				if <br><span class="menu-hint">условие</span>
+			</a>
+		</li>
+		<li>
+			<a href="../lang/else.html" data-module="activator" data-activate>                   
+				else <br><span class="menu-hint">альтернатива условию</span>
+			</a>
+		</li>
+		<li>
+			<a href="../lang/elseif.html" data-module="activator" data-activate>                   
+				elseif <br><span class="menu-hint">альтернатива условию</span>
+			</a>
+		</li>
+		<li>
+			<a href="../lang/switch.html" data-module="activator" data-activate>                   
+				switch <br><span class="menu-hint">множественный выбор</span>
+			</a>
+		</li>
+		<li>
+			<a href="../lang/for.html" data-module="activator" data-activate>                   
+				for <br><span class="menu-hint">цикл</span>
+			</a>
+		</li>
+		<li>
+			<a href="../lang/while.html" data-module="activator" data-activate>                   
+				while <br><span class="menu-hint">цикл</span>
+			</a>
+		</li>
+		<li>
+			<a href="../lang/break.html" data-module="activator" data-activate>                   
+				break <br><span class="menu-hint">остановка цикла</span>
+			</a>
+		</li>
+		<li>
+			<a href="../lang/continue.html" data-module="activator" data-activate>                   
+				continue <br><span class="menu-hint">переход на следующую итерацию</span>
+			</a>
+		</li>
+		<li>
+			<a href="../lang/Array.html" data-module="activator" data-activate>                   
+				Array <br><span class="menu-hint">создание массива</span>
+			</a>
+		</li>
+		<li>
+			<a href="../lang/Object.html" data-module="activator" data-activate>                   
+				Object <br><span class="menu-hint">создание объекта <br> (ассоциативного массива)</span>
+			</a>
+		</li>
+		<li>
+			<a href="../lang/function.html" data-module="activator" data-activate>                   
+				function <br><span class="menu-hint">Функции</span>
+			</a>
+		</li>
+		<li>
+			<a href="../lang/eval.html" data-module="activator" data-activate>                   
+				eval <br><span class="menu-hint">выполнение строки кода</span>
+			</a>
+		</li>
+		<li>
+			<a href="../lang/arguments.html" data-module="activator" data-activate>                   
+				arguments <br><span class="menu-hint">все переданные параметры</span>
+			</a>
+		</li>
+		<li>
+			<a href="../lang/delete.html" data-module="activator" data-activate>                   
+				delete <br><span class="menu-hint">удаление свойства объекта</span>
+			</a>
+		</li>
+		<li>
+			<a href="../lang/in.html" data-module="activator" data-activate>                   
+				in <br><span class="menu-hint">проверка наличия свойства</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<div>
+	<h2>Объекты</h2>
+	<ul>
+		<li>
+			<a href="../object/defineProperty.html" data-module="activator" data-activate>                   
+				defineProperty <br><span class="menu-hint">настройка свойства</span>
+			</a>
+		</li>
+		<li>
+			<a href="../object/defineProperties.html" data-module="activator" data-activate>                   
+				defineProperties <br><span class="menu-hint">настройка свойств</span>
+			</a>
+		</li>
+		<li>
+			<a href="../object/toString.html" data-module="activator" data-activate>                   
+				toString <br><span class="menu-hint">преобразование в строку</span>
+			</a>
+		</li>
+		<li>
+			<a href="../object/valueOf.html" data-module="activator" data-activate>                   
+				valueOf <br><span class="menu-hint">преобразование в число</span>
+			</a>
+		</li>
+		<li>
+			<a href="../object/Object.keys.html" data-module="activator" data-activate>                   
+				Object.keys <br><span class="menu-hint">массив свойств объекта</span>
+			</a>
+		</li>
+		<li>
+			<a href="../object/new.html" data-module="activator" data-activate>                   
+				new <br><span class="menu-hint">конструктор объектов</span>
+			</a>
+		</li>
+		<li>
+			<a href="../object/prototype.html" data-module="activator" data-activate>                   
+				prototype <br><span class="menu-hint">прототип объекта</span>
+			</a>
+		</li>
+		<li>
+			<a href="../object/instanceof.html" data-module="activator" data-activate>                   
+				instanceof <br><span class="menu-hint">проверка класса</span>
+			</a>
+		</li>
+		<li>
+			<a href="../object/create.html" data-module="activator" data-activate>                   
+				create <br><span class="menu-hint">создание объекта с прототипом</span>
+			</a>
+		</li>
+		<li>
+			<a href="../object/constructor.html" data-module="activator" data-activate>                   
+				constructor <br><span class="menu-hint">конструктор объекта</span>
+			</a>
+		</li>
+		<li>
+			<a href="../object/hasOwnProperty.html" data-module="activator" data-activate>                   
+				hasOwnProperty <br><span class="menu-hint">проверка наличия свойства</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<div>
+	<h2>Контекст</h2>
+	<ul>
+		<li>
+			<a href="../context/this.html" data-module="activator" data-activate>                   
+				this <br><span class="menu-hint">контекст вызова</span>
+			</a>
+		</li>
+		
+		<li>
+			<a href="../context/call.html" data-module="activator" data-activate>                   
+				call <br><span class="menu-hint">явное указание this</span>
+			</a>
+		</li>
+		
+		<li>
+			<a href="../context/apply.html" data-module="activator" data-activate>                   
+				apply <br><span class="menu-hint">явное указание this</span>
+			</a>
+		</li>
+		
+		<li>
+			<a href="../context/bind.html" data-module="activator" data-activate>                   
+				bind <br><span class="menu-hint">привязка контекста</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<!--
+<div>
+	<h2>Window</h2>
+	<ul>
+		<li>
+			<a href="../window/window.open.html" data-module="activator" data-activate>                   
+				window.open <br><span class="menu-hint">открытие окна</span>
+			</a>
+		</li>
+		<li>
+			<a href="../window/window.close.html" data-module="activator" data-activate>                   
+				window.close <br><span class="menu-hint">закрытия окна</span>
+			</a>
+		</li>
+		<li>
+			<a href="../window/window.focus.html" data-module="activator" data-activate>                   
+				window.focus <br><span class="menu-hint">активное окно</span>
+			</a>
+		</li>
+		<li>
+			<a href="../window/window.location.html" data-module="activator" data-activate>                   
+				window.location <br><span class="menu-hint">URL окна</span>
+			</a>
+		</li>
+		<li>
+			<a href="../window/window.parent.html" data-module="activator" data-activate>                   
+				window.parent <br><span class="menu-hint">родительское окно</span>
+			</a>
+		</li>
+		<li>
+			<a href="../window/window.top.html" data-module="activator" data-activate>                   
+				window.top <br><span class="menu-hint">верхнее окно</span>
+			</a>
+		</li>
+		<li>
+			<a href="../window/window.name.html" data-module="activator" data-activate>                   
+				window.name <br><span class="menu-hint">имя окна</span>
+			</a>
+		</li>
+		<li>
+			<a href="../window/window.frames.html" data-module="activator" data-activate>                   
+				window.frames <br><span class="menu-hint">список фреймов</span>
+			</a>
+		</li>
+		<li>
+			<a href="../window/window.opener.html" data-module="activator" data-activate>                   
+				window.opener <br><span class="menu-hint">родитель окна</span>
+			</a>
+		</li>
+		<li>
+			<a href="../window/window.closed.html" data-module="activator" data-activate>                   
+				window.closed <br><span class="menu-hint">состояние окна</span>
+			</a>
+		</li>
+		<li>
+			<a href="../window/window.status.html" data-module="activator" data-activate>                   
+				window.status <br><span class="menu-hint">статус окна</span>
+			</a>
+		</li>
+	</ul>
+</div>
+-->					</div>
+				</div>
+			</aside>
+			<div class="content">
+				<main role="main">
+										<h2>События мыши</h2>
+<table class="table table-bordered table-colored description">
+	<tr>
+		<th>Атрибут</th>
+		<th>Описание</th>
+	</tr>
+	<tr>
+		<td class="left-th">onclick</td>
+		<td>
+			Произведен клик кнопкой мыши на элементе управления. 
+			Событие возникает после того, как кнопка мыши была отпущена.
+		</td>	
+	</tr>
+	<tr>
+		<td class="left-th">onmousedown</td>
+		<td>
+			Нажата кнопка мыши.
+		</td>	
+	</tr>
+	<tr>
+		<td class="left-th">onmouseup</td>
+		<td>
+			Отжата кнопка мыши.
+		</td>	
+	</tr>
+	<tr>
+		<td class="left-th">ondblclick</td>
+		<td>
+			Двойной щелчок.
+		</td>	
+	</tr>
+	<tr>
+		<td class="left-th">onmousemove</td>
+		<td>
+			Указатель мыши движется внутри области отображения элемента.
+		</td>	
+	</tr>
+	<tr>
+		<td class="left-th">onmouseout</td>
+		<td>
+			Указатель мыши вышел из области отображения элемента.
+		</td>	
+	</tr>
+	<tr>
+		<td class="left-th">onmouseover</td>
+		<td>
+			Указатель мыши находится внутри области отображения элемента.
+		</td>	
+	</tr>
+	
+</table>
+
+<h2>События клавиатуры</h2>
+<table class="table table-bordered table-colored description">
+	<tr>
+		<th>Атрибут</th>
+		<th>Описание</th>
+	</tr>
+	<tr>
+		<td class="left-th">onkeydown</td>
+		<td>
+			Нажата кнопки на клавиатуре.
+		</td>	
+	</tr>
+	<tr>
+		<td class="left-th">onkeypress</td>
+		<td>
+			Кнопка на клавиатуре нажата и не отпускается дольше, чем интервал повторения. 
+			Длительность интервала повторения является 
+			системным параметром и зависит от настроек операционной системы пользователя.
+		</td>	
+	</tr>
+	<tr>
+		<td class="left-th">onkeyup</td>
+		<td>
+			Отпущена ранее нажатая кнопка.
+		</td>	
+	</tr>
+	
+</table>
+
+<h2>События форм и элементов страницы</h2>
+<table class="table table-bordered table-colored description">
+	<tr>
+		<th>Атрибут</th>
+		<th>Описание</th>
+	</tr>
+	<tr>
+		<td class="left-th">onchange</td>
+		<td>
+			Элемент теряет фокус ввода, а содержимое элемента 
+			изменилось за время, пока элемент был в фокусе.
+		</td>	
+	</tr>
+	<tr>
+		<td class="left-th">onselect</td>
+		<td>
+			Какая-то часть текста внутри элемента становится выделенной.
+		</td>	
+	</tr>
+	<tr>
+		<td class="left-th">onsubmit</td>
+		<td>
+			В форме нажата кнопка "Отправить", 
+			но отправка формы на сервер еще не производилась.
+		</td>	
+	</tr>
+</table>
+
+<h2>События форм и элементов страницы</h2>
+<table class="table table-bordered table-colored description">
+	<tr>
+		<th>Атрибут</th>
+		<th>Описание</th>
+	</tr>
+	<tr>
+		<td class="left-th">onblur</td>
+		<td>
+			Элемент управления теряет фокус ввода, т.е. курсор переходит к другому элементу.
+		</td>	
+	</tr>
+	<tr>
+		<td class="left-th">onfocus</td>
+		<td>
+			Отображаемый элемент получил фокуса ввода. 
+			Для текстовых полей это событие означает, что курсор уже находится в данном элементе.
+		</td>	
+	</tr>
+	<tr>
+		<td class="left-th">onload</td>
+		<td>
+			Завершена загрузка страницы.
+		</td>	
+	</tr>
+	<tr>
+		<td class="left-th">onunload</td>
+		<td>
+			Производится выход из документа (закрытие или перенаправление страницы на другой адрес).
+		</td>	
+	</tr>
+	<tr>
+		<td class="left-th">onscroll</td>
+		<td>
+			Срабатывает при прокрутке элемента.
+		</td>	
+	</tr>
+	
+</table>										<div class="nav-block siblings-block">
+			<a href="../timer/clearTimeout.html" class="prev"><span class="arrow">&larr;</span> Предыдущая страница</a>
+				<a href="dom-element.html" class="next">Следующая страница <span class="arrow">&rarr;</span></a>
+	</div>
+
+				</main>
+				<aside>
+					<div class="bottom-menu" id="menu">
+						<div class="left sidebar">
+							<div>
+	<h2>Строки</h2>
+	<ul>
+		<li>
+			<a href="../string/length.html" data-module="activator" data-activate>                   
+				length <br><span class="menu-hint">длина строки</span>
+			</a>
+		</li>
+		<li>
+			<a href="../string/toLowerCase.html" data-module="activator" data-activate>                   
+				toLowerCase <br><span class="menu-hint">нижний регистр</span>
+			</a>
+		</li>
+		<li>
+			<a href="../string/toUpperCase.html" data-module="activator" data-activate>                   
+				toUpperCase <br><span class="menu-hint">верхний регистр</span>
+			</a>
+		</li>
+		<li>
+			<a href="../string/split.html" data-module="activator" data-activate>                   
+				split <br><span class="menu-hint">разбиение строки на массив</span>
+			</a>
+		</li>
+		<li>
+			<a href="../string/substr.html" data-module="activator" data-activate>                   
+				substr <br><span class="menu-hint">вырезание подстроки</span>
+			</a>
+		</li>
+		<li>
+			<a href="../string/substring.html" data-module="activator" data-activate>                   
+				substring <br><span class="menu-hint">вырезание подстроки</span>
+			</a>
+		</li>
+		<li>
+			<a href="../string/slice.html" data-module="activator" data-activate>                   
+				slice <br><span class="menu-hint">вырезание подстроки</span>
+			</a>
+		</li>
+		<li>
+			<a href="../string/concat.html" data-module="activator" data-activate>                   
+				concat <br><span class="menu-hint">объединение строк</span>
+			</a>
+		</li>
+		<li>
+			<a href="../string/indexOf.html" data-module="activator" data-activate>                   
+				indexOf <br><span class="menu-hint">поиск совпадений с начала</span>
+			</a>
+		</li>
+		<li>
+			<a href="../string/lastIndexOf.html" data-module="activator" data-activate>                   
+				lastIndexOf <br><span class="menu-hint">поиск совпадений с конца</span>
+			</a>
+		</li>
+		<li>
+			<a href="../string/replace.html" data-module="activator" data-activate>                   
+				replace <br><span class="menu-hint">замена текста в строке</span>
+			</a>
+		</li>
+		<li>
+			<a href="../string/charAt.html" data-module="activator" data-activate>                   
+				charAt <br><span class="menu-hint">символ строки</span>
+			</a>
+		</li>
+		<li>
+			<a href="../string/charCodeAt.html" data-module="activator" data-activate>                   
+				charCodeAt <br><span class="menu-hint">символ по его коду</span>
+			</a>
+		</li>
+		<li>
+			<a href="../string/String.fromCharCode.html" data-module="activator" data-activate>                   
+				String.fromCharCode <br><span class="menu-hint">код символа</span>
+			</a>
+		</li>
+		<li>
+			<a href="../string/trim.html" data-module="activator" data-activate>                   
+				trim <br><span class="menu-hint">удаление пробелов по краям</span>
+			</a>
+		</li>
+		<li>
+			<a href="../string/localeCompare.html" data-module="activator" data-activate>                   
+				localeCompare <br><span class="menu-hint">сравнение строк</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<div>
+	<h2>Массивы</h2>
+	<ul>
+		<li>
+			<a href="../array/length.html" data-module="activator" data-activate>                   
+				length <br><span class="menu-hint">длина массива</span>
+			</a>
+		</li>
+		<li>
+			<a href="../array/concat.html" data-module="activator" data-activate>                   
+				concat <br><span class="menu-hint">слияние массивов вместе</span>
+			</a>
+		</li>
+		<li>
+			<a href="../array/join.html" data-module="activator" data-activate>                   
+				join <br><span class="menu-hint">слияние массива в строку</span>
+			</a>
+		</li>
+		<li>
+			<a href="../array/reverse.html" data-module="activator" data-activate>                   
+				reverse <br><span class="menu-hint">переворот массива</span>
+			</a>
+		</li>
+		<li>
+			<a href="../array/slice.html" data-module="activator" data-activate>                   
+				slice <br><span class="menu-hint">отрезание части массива</span>
+			</a>
+		</li>
+		<li>
+			<a href="../array/splice.html" data-module="activator" data-activate>                   
+				splice <br><span class="menu-hint">отрезание части массива</span>
+			</a>
+		</li>
+		<li>
+			<a href="../array/shift.html" data-module="activator" data-activate>                   
+				shift <br><span class="menu-hint">удаление первого элемента</span>
+			</a>
+		</li>
+		<li>
+			<a href="../array/pop.html" data-module="activator" data-activate>                   
+				pop <br><span class="menu-hint">удаление последнего элемента</span>
+			</a>
+		</li>
+		<li>
+			<a href="../array/unshift.html" data-module="activator" data-activate>                   
+				unshift <br><span class="menu-hint">добавление элементов в начало</span>
+			</a>
+		</li>
+		<li>
+			<a href="../array/push.html" data-module="activator" data-activate>                   
+				push <br><span class="menu-hint">добавление элементов в конец</span>
+			</a>
+		</li>
+		<li>
+			<a href="../array/sort.html" data-module="activator" data-activate>                   
+				sort <br><span class="menu-hint">сортировка массива</span>
+			</a>
+		</li>
+		<li>
+			<a href="../array/forEach.html" data-module="activator" data-activate>                   
+				forEach <br><span class="menu-hint">перебор массива</span>
+			</a>
+		</li>
+		<li>
+			<a href="../array/filter.html" data-module="activator" data-activate>                   
+				filter <br><span class="menu-hint">фильтрация массива</span>
+			</a>
+		</li>
+		<li>
+			<a href="../array/map.html" data-module="activator" data-activate>                   
+				map <br><span class="menu-hint">трансформация массива</span>
+			</a>
+		</li>
+		<li>
+			<a href="../array/every.html" data-module="activator" data-activate>                   
+				every <br><span class="menu-hint">все в массиве</span>
+			</a>
+		</li>
+		<li>
+			<a href="../array/some.html" data-module="activator" data-activate>                   
+				some <br><span class="menu-hint">хотя бы один в массиве</span>
+			</a>
+		</li>
+		<li>
+			<a href="../array/reduce.html" data-module="activator" data-activate>                   
+				reduce <br><span class="menu-hint">свертка к значению</span>
+			</a>
+		</li>
+		<li>
+			<a href="../array/reduceRight.html" data-module="activator" data-activate>                   
+				reduceRight <br><span class="menu-hint">свертка к значению</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<div>
+	<h2>Date</h2>
+	<ul>
+		<li>
+			<a href="../date/Date.html" data-module="activator" data-activate>                   
+				Date <br><span class="menu-hint">объект для работы даты</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/getFullYear.html" data-module="activator" data-activate>                   
+				getFullYear <br><span class="menu-hint">год (4 цифры)</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/getYear.html" data-module="activator" data-activate>                   
+				getYear <br><span class="menu-hint">год (2 цифры)</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/getMonth.html" data-module="activator" data-activate>                   
+				getMonth <br><span class="menu-hint">месяц</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/getDate.html" data-module="activator" data-activate>                   
+				getDate <br><span class="menu-hint">день месяца</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/getHours.html" data-module="activator" data-activate>                   
+				getHours <br><span class="menu-hint">часы</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/getMinutes.html" data-module="activator" data-activate>                   
+				getMinutes <br><span class="menu-hint">минуты</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/getSeconds.html" data-module="activator" data-activate>                   
+				getSeconds <br><span class="menu-hint">секунды</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/getMilliseconds.html" data-module="activator" data-activate>                   
+				getMilliseconds <br><span class="menu-hint">миллисекунды</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/getDay.html" data-module="activator" data-activate>                   
+				getDay <br><span class="menu-hint">день недели</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/getTime.html" data-module="activator" data-activate>                   
+				getTime <br><span class="menu-hint">дата в миллисекундах</span>
+			</a>
+		</li>
+				<li>
+			<a href="../date/setFullYear.html" data-module="activator" data-activate>                   
+				setFullYear <br><span class="menu-hint">установка года</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/setMonth.html" data-module="activator" data-activate>                   
+				setMonth <br><span class="menu-hint">установка месяца</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/setDate.html" data-module="activator" data-activate>                   
+				setDate <br><span class="menu-hint">установка дня месяца</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/setHours.html" data-module="activator" data-activate>                   
+				setHours <br><span class="menu-hint">установка часа</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/setMinutes.html" data-module="activator" data-activate>                   
+				setMinutes <br><span class="menu-hint">установка минуты</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/setSeconds.html" data-module="activator" data-activate>                   
+				setSeconds <br><span class="menu-hint">установка секунды</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/setMilliseconds.html" data-module="activator" data-activate>                   
+				setMilliseconds <br><span class="menu-hint">установка миллисекунды</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/now.html" data-module="activator" data-activate>                   
+				now <br><span class="menu-hint">текущая дата в миллисекундах</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/getTimezoneOffset.html" data-module="activator" data-activate>                   
+				getTimezoneOffset <br><span class="menu-hint">смещение времени</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/toTimeString.html" data-module="activator" data-activate>                   
+				toTimeString <br><span class="menu-hint">преобразование времени в строку</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/toDateString.html" data-module="activator" data-activate>                   
+				toDateString <br><span class="menu-hint">преобразование даты в строку</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/toISOString.html" data-module="activator" data-activate>                   
+				toISOString <br><span class="menu-hint">дата в формате ISO</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/toUTCString.html" data-module="activator" data-activate>                   
+				toUTCString <br><span class="menu-hint">дата в формате GMT</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/toLocaleString.html" data-module="activator" data-activate>                   
+				toLocaleString <br><span class="menu-hint">форматирование даты</span>
+			</a>
+		</li>
+		<li>
+			<a href="../date/Date.parse.html" data-module="activator" data-activate>                   
+				Date.parse <br><span class="menu-hint">дата из строки</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<div>
+	<h2>Math</h2>
+	<ul>
+		<li>
+			<a href="../math/Math.random.html" data-module="activator" data-activate>                   
+				Math.random <br><span class="menu-hint">случайное число</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/Math.round.html" data-module="activator" data-activate>                   
+				Math.round <br><span class="menu-hint">округление числа</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/Math.ceil.html" data-module="activator" data-activate>                   
+				Math.ceil <br><span class="menu-hint">округление в большую сторону</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/Math.floor.html" data-module="activator" data-activate>                   
+				Math.floor <br><span class="menu-hint">округление в меньшую сторону</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/toFixed.html" data-module="activator" data-activate>                   
+				toFixed <br><span class="menu-hint">округление числа</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/toPrecision.html" data-module="activator" data-activate>                   
+				toPrecision <br><span class="menu-hint">округление числа</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/Math.sqrt.html" data-module="activator" data-activate>                   
+				Math.sqrt <br><span class="menu-hint">квадратный корень числа</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/Math.pow.html" data-module="activator" data-activate>                   
+				Math.pow <br><span class="menu-hint">степень числа</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/Math.max.html" data-module="activator" data-activate>                   
+				Math.max <br><span class="menu-hint">максимальное число</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/Math.min.html" data-module="activator" data-activate>                   
+				Math.min <br><span class="menu-hint">минимальное число</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/Math.abs.html" data-module="activator" data-activate>                   
+				Math.abs <br><span class="menu-hint">модуль числа</span>
+			</a>
+		</li>
+		
+		<li>
+			<a href="../math/isFinite.html" data-module="activator" data-activate>                   
+				isFinite <br><span class="menu-hint">проверка на конечное число</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/isNaN.html" data-module="activator" data-activate>                   
+				isNaN <br><span class="menu-hint">проверка на NaN</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/parseInt.html" data-module="activator" data-activate>                   
+				parseInt <br><span class="menu-hint">строка в число</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/parseFloat.html" data-module="activator" data-activate>                   
+				parseFloat <br><span class="menu-hint">строка в дробь</span>
+			</a>
+		</li>
+		
+		
+		<li>
+			<a href="../math/Math.sin.html" data-module="activator" data-activate>                   
+				Math.sin <br><span class="menu-hint">синус числа</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/Math.cos.html" data-module="activator" data-activate>                   
+				Math.cos <br><span class="menu-hint">косинус числа</span>
+			</a>
+		</li>
+		
+		<li>
+			<a href="../math/Math.tan.html" data-module="activator" data-activate>                   
+				Math.tan <br><span class="menu-hint">тангенс угла</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/Math.asin.html" data-module="activator" data-activate>                   
+				Math.asin <br><span class="menu-hint">арксинус числа</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/Math.acos.html" data-module="activator" data-activate>                   
+				Math.acos <br><span class="menu-hint">арккосинус числа</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/Math.atan.html" data-module="activator" data-activate>                   
+				Math.atan <br><span class="menu-hint">арктангенс числа </span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/Math.exp.html" data-module="activator" data-activate>                   
+				Math.exp <br><span class="menu-hint">экспонента</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/Math.log.html" data-module="activator" data-activate>                   
+				Math.log <br><span class="menu-hint">натуральный логарифм</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/toExponential.html" data-module="activator" data-activate>                   
+				toExponential <br><span class="menu-hint">экспоненциальная нотация</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<div>
+	<h2>Математические константы</h2>
+	<ul>
+		<li>
+			<a href="../math/Number.NaN.html" data-module="activator" data-activate>                   
+				Number.NaN <br><span class="menu-hint">Not-A-Number</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/Number.NEGATIVE_INFINITY.html" data-module="activator" data-activate>                   
+				Number.NEGATIVE_INFINITY <br><span class="menu-hint">минус бесконечность</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/Number.POSITIVE_INFINITY.html" data-module="activator" data-activate>                   
+				Number.POSITIVE_INFINITY <br><span class="menu-hint">плюс бесконечность</span>
+			</a>
+		</li>
+		
+		<li>
+			<a href="../math/Math.E.html" data-module="activator" data-activate>                   
+				Math.E <br><span class="menu-hint">значение экспоненты</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/Math.LN2.html" data-module="activator" data-activate>                   
+				Math.LN2 <br><span class="menu-hint">натуральный логарифм 2-х</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/Math.LN10.html" data-module="activator" data-activate>                   
+				Math.LN10 <br><span class="menu-hint">натуральный логарифм 10-ти</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/Math.LOG2E.html" data-module="activator" data-activate>                   
+				Math.LOG2E <br><span class="menu-hint">логарифм от e по основанию 2</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/Math.LOG10E.html" data-module="activator" data-activate>                   
+				Math.LOG10E <br><span class="menu-hint">логарифм от e по основанию 10</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/Math.PI.html" data-module="activator" data-activate>                   
+				Math.PI <br><span class="menu-hint">число Пи</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/Math.SQRT1_2.html" data-module="activator" data-activate>                   
+				Math.SQRT1_2 <br><span class="menu-hint">квадратный корень из 1/2</span>
+			</a>
+		</li>
+		<li>
+			<a href="../math/Math.SQRT2.html" data-module="activator" data-activate>                   
+				Math.SQRT2 <br><span class="menu-hint">квадратный корень из 2</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<div>
+	<h2>Специальные значения</h2>
+	<ul>
+		<li>
+			<a href="../lang/true.html" data-module="activator" data-activate>                   
+				true <br><span class="menu-hint">истина</span>
+			</a>
+		</li>
+		<li>
+			<a href="../lang/false.html" data-module="activator" data-activate>                   
+				false <br><span class="menu-hint">ложь</span>
+			</a>
+		</li>
+		<li>
+			<a href="../lang/NaN.html" data-module="activator" data-activate>                   
+				NaN <br><span class="menu-hint">не число</span>
+			</a>
+		</li>
+		<li>
+			<a href="../lang/null.html" data-module="activator" data-activate>                   
+				null <br><span class="menu-hint">ничего</span>
+			</a>
+		</li>
+		<li>
+			<a href="../lang/undefined.html" data-module="activator" data-activate>                   
+				undefined <br><span class="menu-hint">неопределенность</span>
+			</a>
+		</li>
+		<li>
+			<a href="../lang/Infinity.html" data-module="activator" data-activate>                   
+				Infinity <br><span class="menu-hint">бесконечность</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<div>
+	<h2>Url кодирование</h2>
+	<ul>
+		<li>
+			<a href="../url/decodeURI.html" data-module="activator" data-activate>                   
+				decodeURI <br><span class="menu-hint">декодирование URL</span>
+			</a>
+		</li>
+		<li>
+			<a href="../url/decodeURIComponent.html" data-module="activator" data-activate>                   
+				decodeURIComponent <br><span class="menu-hint">декодирование URL</span>
+			</a>
+		</li>
+		<li>
+			<a href="../url/encodeURI.html" data-module="activator" data-activate>                   
+				encodeURI <br><span class="menu-hint">кодирование URL</span>
+			</a>
+		</li>
+		<li>
+			<a href="../url/encodeURIComponent.html" data-module="activator" data-activate>                   
+				encodeURIComponent <br><span class="menu-hint">кодирование компонентов URI</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<div>
+	<h2>Диалоговые окошки</h2>
+	<ul>
+		<li>
+			<a href="../dialog/alert.html" data-module="activator" data-activate>                   
+				alert <br><span class="menu-hint">окно для сообщения</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dialog/confirm.html" data-module="activator" data-activate>                   
+				confirm <br><span class="menu-hint">окно для подтверждения</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dialog/prompt.html" data-module="activator" data-activate>                   
+				prompt <br><span class="menu-hint">окно для ввода данных</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<div>
+	<h2>Типизация</h2>
+	<ul>
+		<li>
+			<a href="../lang/typeof.html" data-module="activator" data-activate>                   
+				typeof <br><span class="menu-hint">тип переменной</span>
+			</a>
+		</li>
+		<li>
+			<a href="../lang/Number.html" data-module="activator" data-activate>                   
+				Number <br><span class="menu-hint">преобразование к числу</span>
+			</a>
+		</li>
+		<li>
+			<a href="../lang/String.html" data-module="activator" data-activate>                   
+				String <br><span class="menu-hint">преобразование к строке</span>
+			</a>
+		</li>
+		<li>
+			<a href="../lang/Boolean.html" data-module="activator" data-activate>                   
+				Boolean <br><span class="menu-hint">преобразование к boolean</span>
+			</a>
+		</li>
+	</ul>
+</div>
+
+<div>
+	<h2>Таймеры</h2>
+	<ul>
+		<li>
+			<a href="../timer/setInterval.html" data-module="activator" data-activate>                   
+				setInterval <br><span class="menu-hint">таймер выполнения кода</span>
+			</a>
+		</li>
+		<li>
+			<a href="../timer/setTimeout.html" data-module="activator" data-activate>                   
+				setTimeout <br><span class="menu-hint">пауза при выполнении кода</span>
+			</a>
+		</li>
+		<li>
+			<a href="../timer/clearInterval.html" data-module="activator" data-activate>                   
+				clearInterval <br><span class="menu-hint">сброс таймера</span>
+			</a>
+		</li>
+		<li>
+			<a href="../timer/clearTimeout.html" data-module="activator" data-activate>                   
+				clearTimeout <br><span class="menu-hint">сброс паузы</span>
+			</a>
+		</li>
+	</ul>
+</div>						</div>
+						<div class="right sidebar">
+							﻿<div>
+	<h2>Разное</h2>
+	<ul>
+		<li>
+			<a href="attrs.html" data-module="activator" data-activate>                   
+				Атрибуты событий <br><span class="menu-hint">таблица с описанием</span>
+			</a>
+		</li>
+		<li>
+			<a href="dom-element.html" data-module="activator" data-activate>                   
+				DOM элемент <br><span class="menu-hint">что это такое</span>
+			</a>
+		</li>
+		<li>
+			<a href="pseudo-array.html" data-module="activator" data-activate>                   
+				Псевдомассив / коллекция <br><span class="menu-hint">особенности работы</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<div>
+	<h2>Работа с DOM</h2>
+	<ul>
+		<li>
+			<a href="../dom/getElementById.html" data-module="activator" data-activate>                   
+				getElementById <br><span class="menu-hint">элемент по id</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/getElementsByTagName.html" data-module="activator" data-activate>                   
+				getElementsByTagName <br><span class="menu-hint">элементы по тегу</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/getElementsByClassName.html" data-module="activator" data-activate>                   
+				getElementsByClassName <br><span class="menu-hint">элементы по классу</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/querySelector.html" data-module="activator" data-activate>                   
+				querySelector <br><span class="menu-hint">элементы по селектору</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/querySelectorAll.html" data-module="activator" data-activate>                   
+				querySelectorAll <br><span class="menu-hint">элементы по селектору</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/matches.html" data-module="activator" data-activate>                   
+				matches <br><span class="menu-hint">соответствие селектору</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/closest.html" data-module="activator" data-activate>                   
+				closest <br><span class="menu-hint">родитель по селектору</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/contains.html" data-module="activator" data-activate>                   
+				contains <br><span class="menu-hint">проверка на вложенность</span>
+			</a>
+		</li>
+		
+		<li>
+			<a href="../dom/document.html" data-module="activator" data-activate>                   
+				document <br><span class="menu-hint">объект страница</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<div>
+	<h2>Работа с DOM</h2>
+	<ul>
+		<li>
+			<a href="../dom/innerHTML.html" data-module="activator" data-activate>                   
+				innerHTML <br><span class="menu-hint">текст элемента</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/getAttribute.html" data-module="activator" data-activate>                   
+				getAttribute <br><span class="menu-hint">получение атрибутов элемента</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/setAttribute.html" data-module="activator" data-activate>                   
+				setAttribute <br><span class="menu-hint">изменение атрибутов элемента</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/removeAttribute.html" data-module="activator" data-activate>                   
+				removeAttribute <br><span class="menu-hint">удаление атрибутов элемента</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/hasAttribute.html" data-module="activator" data-activate>                   
+				hasAttribute <br><span class="menu-hint">проверка наличия атрибута</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/classList.html" data-module="activator" data-activate>                   
+				classList <br><span class="menu-hint">работа с классами</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/dataset.html" data-module="activator" data-activate>                   
+				dataset <br><span class="menu-hint">атрибуты data-</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/cssText.html" data-module="activator" data-activate>                   
+				cssText <br><span class="menu-hint">стиль 1 строкой</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/getComputedStyle.html" data-module="activator" data-activate>                   
+				getComputedStyle <br><span class="menu-hint">стиль из CSS</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<div>
+	<h2>Элементы DOM</h2>
+	<ul>
+		<li>
+			<a href="../dom/tagName.html" data-module="activator" data-activate>                   
+				tagName <br><span class="menu-hint">название тега</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/children.html" data-module="activator" data-activate>                   
+				children <br><span class="menu-hint">все потомки элемента</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/firstElementChild.html" data-module="activator" data-activate>                   
+				firstElementChild <br><span class="menu-hint">первый потомок</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/lastElementChild.html" data-module="activator" data-activate>                   
+				lastElementChild <br><span class="menu-hint">последний потомок</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/previousElementSibling.html" data-module="activator" data-activate>                   
+				previousElementSibling <br><span class="menu-hint">следующий элемент</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/nextElementSibling.html" data-module="activator" data-activate>                   
+				nextElementSibling <br><span class="menu-hint">предыдущий элемент</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/parentElement.html" data-module="activator" data-activate>                   
+				parentElement <br><span class="menu-hint">родительский элемент</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<div>
+	<h2>Узлы nodes</h2>
+	<ul>
+		<li>
+			<a href="../dom/childNodes.html" data-module="activator" data-activate>                   
+				childNodes <br><span class="menu-hint">дочерние узлы</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/firstChild.html" data-module="activator" data-activate>                   
+				firstChild <br><span class="menu-hint">первый потомок узел</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/lastChild.html" data-module="activator" data-activate>                   
+				lastChild <br><span class="menu-hint">последний потомок узел</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/parentNode.html" data-module="activator" data-activate>                   
+				parentNode <br><span class="menu-hint">родительский узел</span>
+			</a>
+		</li>
+		<!--
+		<li>
+			<a href="../dom/nodeValue.html" data-module="activator" data-activate>                   
+				nodeValue <br><span class="menu-hint">значение узла</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/data.html" data-module="activator" data-activate>                   
+				data <br><span class="menu-hint">значение узла</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/textContent.html" data-module="activator" data-activate>                   
+				textContent <br><span class="menu-hint">текст без тегов</span>
+			</a>
+		</li>
+		-->
+	</ul>
+</div>
+<div>
+	<h2>Вставка элементов</h2>
+	<ul>
+		<li>
+			<a href="../dom/createElement.html" data-module="activator" data-activate>                   
+				createElement <br><span class="menu-hint">создание элемента</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/appendChild.html" data-module="activator" data-activate>                   
+				appendChild <br><span class="menu-hint">вставка в конец</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/insertBefore.html" data-module="activator" data-activate>                   
+				insertBefore <br><span class="menu-hint">вставка перед</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/cloneNode.html" data-module="activator" data-activate>                   
+				cloneNode <br><span class="menu-hint">клонирование узлов</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/removeChild.html" data-module="activator" data-activate>                   
+				removeChild <br><span class="menu-hint">удаление узлов</span>
+			</a>
+		</li>			
+		<li>
+			<a href="../dom/insertAdjacentHTML.html" data-module="activator" data-activate>                   
+				insertAdjacentHTML <br><span class="menu-hint">вставка HTML кода</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<div>
+	<h2>События</h2>
+	<ul>
+		<li>
+			<a href="../event/addEventListener.html" data-module="activator" data-activate>                   
+				addEventListener <br><span class="menu-hint">привязка событий</span>
+			</a>
+		</li>
+		<li>
+			<a href="../event/removeEventListener.html" data-module="activator" data-activate>                   
+				removeEventListener <br><span class="menu-hint">удаление событий</span>
+			</a>
+		</li>
+		<li>
+			<a href="../event/Event.html" data-module="activator" data-activate>                   
+				Event <br><span class="menu-hint">конструктор событий</span>
+			</a>
+		</li>
+		<li>
+			<a href="../event/dispatchEvent.html" data-module="activator" data-activate>                   
+				dispatchEvent <br><span class="menu-hint">имитация события</span>
+			</a>
+		</li>
+		<li>
+			<a href="../event/focus.html" data-module="activator" data-activate>                   
+				focus <br><span class="menu-hint">установить фокус</span>
+			</a>
+		</li>
+		<li>
+			<a href="../event/blur.html" data-module="activator" data-activate>                   
+				blur <br><span class="menu-hint">снять фокус</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<div>
+	<h2>Объект события</h2>
+	<ul>
+		<li>
+			<a href="../event/type.html" data-module="activator" data-activate>                   
+				type <br><span class="menu-hint">тип события</span>
+			</a>
+		</li>
+		<li>
+			<a href="../event/target.html" data-module="activator" data-activate>                   
+				target <br><span class="menu-hint">элемент, на котором <br> событие сработало</span>
+			</a>
+		</li>
+		<li>
+			<a href="../event/currentTarget.html" data-module="activator" data-activate>                   
+				currentTarget <br><span class="menu-hint">элемент, на который <br> назначили событие</span>
+			</a>
+		</li>
+		<li>
+			<a href="../event/preventDefault.html" data-module="activator" data-activate>                   
+				preventDefault <br><span class="menu-hint">отмена действия по умолчанию</span>
+			</a>
+		</li>
+		<li>
+			<a href="../event/isTrusted.html" data-module="activator" data-activate>                   
+				isTrusted <br><span class="menu-hint">настоящее ли событие</span>
+			</a>
+		</li>
+		<li>
+			<a href="../event/ctrlKey.html" data-module="activator" data-activate>                   
+				ctrlKey <br><span class="menu-hint">нажат ли Ctrl</span>
+			</a>
+		</li>
+		<li>
+			<a href="../event/altKey.html" data-module="activator" data-activate>                   
+				altKey <br><span class="menu-hint">нажат ли Alt</span>
+			</a>
+		</li>
+		<li>
+			<a href="../event/shiftKey.html" data-module="activator" data-activate>                   
+				shiftKey <br><span class="menu-hint">нажат ли Shift</span>
+			</a>
+		</li>
+		<li>
+			<a href="../event/metaKey.html" data-module="activator" data-activate>                   
+				metaKey <br><span class="menu-hint">нажат ли Cmd</span>
+			</a>
+		</li>
+		<li>
+			<a href="../event/clientX.html" data-module="activator" data-activate>                   
+				clientX <br><span class="menu-hint">координаты мыши</span>
+			</a>
+		</li>
+		<li>
+			<a href="../event/clientY.html" data-module="activator" data-activate>                   
+				clientY <br><span class="menu-hint">координаты мыши</span>
+			</a>
+		</li>
+		<li>
+			<a href="../event/pageX.html" data-module="activator" data-activate>                   
+				pageX <br><span class="menu-hint">координаты мыши</span>
+			</a>
+		</li>
+		<li>
+			<a href="../event/pageY.html" data-module="activator" data-activate>                   
+				pageY <br><span class="menu-hint">координаты мыши</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<div>
+	<h2>Выделение</h2>
+	<ul>
+		<li>
+			<a href="../dom/getSelection.html" data-module="activator" data-activate>                   
+				getSelection <br><span class="menu-hint">выделение текста</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/createRange.html" data-module="activator" data-activate>                   
+				createRange <br><span class="menu-hint">фрагмент документа</span>
+			</a>
+		</li>
+	</ul>
+</div>	
+<div>
+	<h2>Метрики и прокрутка</h2>
+	<ul>
+		<li>
+			<a href="../metric/offsetParent.html" data-module="activator" data-activate>                   
+				offsetParent <br><span class="menu-hint">родитель с позиционированием</span>
+			</a>
+		</li>
+		<li>
+			<a href="../metric/offsetTop.html" data-module="activator" data-activate>                   
+				offsetTop <br><span class="menu-hint">смещение сверху</span>
+			</a>
+		</li>
+		<li>
+			<a href="../metric/offsetLeft.html" data-module="activator" data-activate>                   
+				offsetLeft <br><span class="menu-hint">смещение слева</span>
+			</a>
+		</li>
+		<li>
+			<a href="../metric/offsetWidth.html" data-module="activator" data-activate>                   
+				offsetWidth <br><span class="menu-hint">полная ширина</span>
+			</a>
+		</li>
+		<li>
+			<a href="../metric/offsetHeight.html" data-module="activator" data-activate>                   
+				offsetHeight <br><span class="menu-hint">полная высота</span>
+			</a>
+		</li>
+		<li>
+			<a href="../metric/clientLeft.html" data-module="activator" data-activate>                   
+				clientLeft <br><span class="menu-hint">левая граница</span>
+			</a>
+		</li>
+		<li>
+			<a href="../metric/clientTop.html" data-module="activator" data-activate>                   
+				clientTop <br><span class="menu-hint">верхняя граница</span>
+			</a>
+		</li>
+		<li>
+			<a href="../metric/clientWidth.html" data-module="activator" data-activate>                   
+				clientWidth <br><span class="menu-hint">ширина содержимого</span>
+			</a>
+		</li>
+		<li>
+			<a href="../metric/clientHeight.html" data-module="activator" data-activate>                   
+				clientHeight <br><span class="menu-hint">высота содержимого</span>
+			</a>
+		</li>
+		<li>
+			<a href="../metric/scrollWidth.html" data-module="activator" data-activate>                   
+				scrollWidth <br><span class="menu-hint">ширина с прокруткой</span>
+			</a>
+		</li>
+		<li>
+			<a href="../metric/scrollHeight.html" data-module="activator" data-activate>                   
+				scrollHeight <br><span class="menu-hint">высота с прокруткой</span>
+			</a>
+		</li>
+		<li>
+			<a href="../metric/scrollLeft.html" data-module="activator" data-activate>                   
+				scrollLeft <br><span class="menu-hint">горизонтальная прокрутка</span>
+			</a>
+		</li>
+		<li>
+			<a href="../metric/scrollTop.html" data-module="activator" data-activate>                   
+				scrollTop <br><span class="menu-hint">вертикальная прокрутка</span>
+			</a>
+		</li>
+		<li>
+			<a href="../metric/scrollBy.html" data-module="activator" data-activate>                   
+				scrollBy <br><span class="menu-hint">прокрутка страницы</span>
+			</a>
+		</li>
+		<li>
+			<a href="../metric/scrollTo.html" data-module="activator" data-activate>                   
+				scrollTo <br><span class="menu-hint">прокрутка страницы</span>
+			</a>
+		</li>
+		<li>
+			<a href="../metric/scrollIntoView.html" data-module="activator" data-activate>                   
+				scrollIntoView <br><span class="menu-hint">прокрутить до видимости</span>
+			</a>
+		</li>
+		<li>
+			<a href="../metric/getBoundingClientRect.html" data-module="activator" data-activate>                   
+				getBoundingClientRect <br><span class="menu-hint">координаты элемента</span>
+			</a>
+		</li>
+		<li>
+			<a href="../metric/elementFromPoint.html" data-module="activator" data-activate>                   
+				elementFromPoint <br><span class="menu-hint">элемент на координатах</span>
+			</a>
+		</li>
+		<li>
+			<a href="../metric/pageXOffset.html" data-module="activator" data-activate>                   
+				pageXOffset <br><span class="menu-hint">горизонтальная <br> прокрутка документа</span>
+			</a>
+		</li>
+		<li>
+			<a href="../metric/pageYOffset.html" data-module="activator" data-activate>                   
+				pageYOffset <br><span class="menu-hint">вертикальная <br> прокрутка документа</span>
+			</a>
+		</li>
+		
+	</ul>
+</div>
+<div>
+	<h2>Таблицы</h2>
+	<ul>
+		<li>
+			<a href="../dom/tHead.html" data-module="activator" data-activate>                   
+				tHead <br><span class="menu-hint">tHead таблицы</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/tFoot.html" data-module="activator" data-activate>                   
+				tFoot <br><span class="menu-hint">tFoot таблицы</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/tBodyes.html" data-module="activator" data-activate>                   
+				tBodyes <br><span class="menu-hint">tBody таблицы</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/rows.html" data-module="activator" data-activate>                   
+				rows <br><span class="menu-hint">массив строк TR</span>
+			</a>
+		</li>
+		<li>
+			<a href="../dom/cells.html" data-module="activator" data-activate>                   
+				cells <br><span class="menu-hint">Массив ячеек TD/TH</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<div>
+	<h2>Конструкции языка</h2>
+	<ul>
+		<li>
+			<a href="../lang/if.html" data-module="activator" data-activate>                   
+				if <br><span class="menu-hint">условие</span>
+			</a>
+		</li>
+		<li>
+			<a href="../lang/else.html" data-module="activator" data-activate>                   
+				else <br><span class="menu-hint">альтернатива условию</span>
+			</a>
+		</li>
+		<li>
+			<a href="../lang/elseif.html" data-module="activator" data-activate>                   
+				elseif <br><span class="menu-hint">альтернатива условию</span>
+			</a>
+		</li>
+		<li>
+			<a href="../lang/switch.html" data-module="activator" data-activate>                   
+				switch <br><span class="menu-hint">множественный выбор</span>
+			</a>
+		</li>
+		<li>
+			<a href="../lang/for.html" data-module="activator" data-activate>                   
+				for <br><span class="menu-hint">цикл</span>
+			</a>
+		</li>
+		<li>
+			<a href="../lang/while.html" data-module="activator" data-activate>                   
+				while <br><span class="menu-hint">цикл</span>
+			</a>
+		</li>
+		<li>
+			<a href="../lang/break.html" data-module="activator" data-activate>                   
+				break <br><span class="menu-hint">остановка цикла</span>
+			</a>
+		</li>
+		<li>
+			<a href="../lang/continue.html" data-module="activator" data-activate>                   
+				continue <br><span class="menu-hint">переход на следующую итерацию</span>
+			</a>
+		</li>
+		<li>
+			<a href="../lang/Array.html" data-module="activator" data-activate>                   
+				Array <br><span class="menu-hint">создание массива</span>
+			</a>
+		</li>
+		<li>
+			<a href="../lang/Object.html" data-module="activator" data-activate>                   
+				Object <br><span class="menu-hint">создание объекта <br> (ассоциативного массива)</span>
+			</a>
+		</li>
+		<li>
+			<a href="../lang/function.html" data-module="activator" data-activate>                   
+				function <br><span class="menu-hint">Функции</span>
+			</a>
+		</li>
+		<li>
+			<a href="../lang/eval.html" data-module="activator" data-activate>                   
+				eval <br><span class="menu-hint">выполнение строки кода</span>
+			</a>
+		</li>
+		<li>
+			<a href="../lang/arguments.html" data-module="activator" data-activate>                   
+				arguments <br><span class="menu-hint">все переданные параметры</span>
+			</a>
+		</li>
+		<li>
+			<a href="../lang/delete.html" data-module="activator" data-activate>                   
+				delete <br><span class="menu-hint">удаление свойства объекта</span>
+			</a>
+		</li>
+		<li>
+			<a href="../lang/in.html" data-module="activator" data-activate>                   
+				in <br><span class="menu-hint">проверка наличия свойства</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<div>
+	<h2>Объекты</h2>
+	<ul>
+		<li>
+			<a href="../object/defineProperty.html" data-module="activator" data-activate>                   
+				defineProperty <br><span class="menu-hint">настройка свойства</span>
+			</a>
+		</li>
+		<li>
+			<a href="../object/defineProperties.html" data-module="activator" data-activate>                   
+				defineProperties <br><span class="menu-hint">настройка свойств</span>
+			</a>
+		</li>
+		<li>
+			<a href="../object/toString.html" data-module="activator" data-activate>                   
+				toString <br><span class="menu-hint">преобразование в строку</span>
+			</a>
+		</li>
+		<li>
+			<a href="../object/valueOf.html" data-module="activator" data-activate>                   
+				valueOf <br><span class="menu-hint">преобразование в число</span>
+			</a>
+		</li>
+		<li>
+			<a href="../object/Object.keys.html" data-module="activator" data-activate>                   
+				Object.keys <br><span class="menu-hint">массив свойств объекта</span>
+			</a>
+		</li>
+		<li>
+			<a href="../object/new.html" data-module="activator" data-activate>                   
+				new <br><span class="menu-hint">конструктор объектов</span>
+			</a>
+		</li>
+		<li>
+			<a href="../object/prototype.html" data-module="activator" data-activate>                   
+				prototype <br><span class="menu-hint">прототип объекта</span>
+			</a>
+		</li>
+		<li>
+			<a href="../object/instanceof.html" data-module="activator" data-activate>                   
+				instanceof <br><span class="menu-hint">проверка класса</span>
+			</a>
+		</li>
+		<li>
+			<a href="../object/create.html" data-module="activator" data-activate>                   
+				create <br><span class="menu-hint">создание объекта с прототипом</span>
+			</a>
+		</li>
+		<li>
+			<a href="../object/constructor.html" data-module="activator" data-activate>                   
+				constructor <br><span class="menu-hint">конструктор объекта</span>
+			</a>
+		</li>
+		<li>
+			<a href="../object/hasOwnProperty.html" data-module="activator" data-activate>                   
+				hasOwnProperty <br><span class="menu-hint">проверка наличия свойства</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<div>
+	<h2>Контекст</h2>
+	<ul>
+		<li>
+			<a href="../context/this.html" data-module="activator" data-activate>                   
+				this <br><span class="menu-hint">контекст вызова</span>
+			</a>
+		</li>
+		
+		<li>
+			<a href="../context/call.html" data-module="activator" data-activate>                   
+				call <br><span class="menu-hint">явное указание this</span>
+			</a>
+		</li>
+		
+		<li>
+			<a href="../context/apply.html" data-module="activator" data-activate>                   
+				apply <br><span class="menu-hint">явное указание this</span>
+			</a>
+		</li>
+		
+		<li>
+			<a href="../context/bind.html" data-module="activator" data-activate>                   
+				bind <br><span class="menu-hint">привязка контекста</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<!--
+<div>
+	<h2>Window</h2>
+	<ul>
+		<li>
+			<a href="../window/window.open.html" data-module="activator" data-activate>                   
+				window.open <br><span class="menu-hint">открытие окна</span>
+			</a>
+		</li>
+		<li>
+			<a href="../window/window.close.html" data-module="activator" data-activate>                   
+				window.close <br><span class="menu-hint">закрытия окна</span>
+			</a>
+		</li>
+		<li>
+			<a href="../window/window.focus.html" data-module="activator" data-activate>                   
+				window.focus <br><span class="menu-hint">активное окно</span>
+			</a>
+		</li>
+		<li>
+			<a href="../window/window.location.html" data-module="activator" data-activate>                   
+				window.location <br><span class="menu-hint">URL окна</span>
+			</a>
+		</li>
+		<li>
+			<a href="../window/window.parent.html" data-module="activator" data-activate>                   
+				window.parent <br><span class="menu-hint">родительское окно</span>
+			</a>
+		</li>
+		<li>
+			<a href="../window/window.top.html" data-module="activator" data-activate>                   
+				window.top <br><span class="menu-hint">верхнее окно</span>
+			</a>
+		</li>
+		<li>
+			<a href="../window/window.name.html" data-module="activator" data-activate>                   
+				window.name <br><span class="menu-hint">имя окна</span>
+			</a>
+		</li>
+		<li>
+			<a href="../window/window.frames.html" data-module="activator" data-activate>                   
+				window.frames <br><span class="menu-hint">список фреймов</span>
+			</a>
+		</li>
+		<li>
+			<a href="../window/window.opener.html" data-module="activator" data-activate>                   
+				window.opener <br><span class="menu-hint">родитель окна</span>
+			</a>
+		</li>
+		<li>
+			<a href="../window/window.closed.html" data-module="activator" data-activate>                   
+				window.closed <br><span class="menu-hint">состояние окна</span>
+			</a>
+		</li>
+		<li>
+			<a href="../window/window.status.html" data-module="activator" data-activate>                   
+				window.status <br><span class="menu-hint">статус окна</span>
+			</a>
+		</li>
+	</ul>
+</div>
+-->						</div>
+					</div>
+				</aside>
+			</div>
+			<footer>
+				<div class="footer">
+					<div class="C">
+	Трепачёв Дмитрий Петрович &copy;  2012-2023 г.
+	<br>
+	По всем вопросам пишите в контакт: <a href="https://vk.com/id55437525">Я в контакте</a>
+</div>				</div>
+			</footer>
+		</div>
+		<script>
+			$('iframe:not([style])').on('load', function(){$(this).height($(this).contents().find('html').height());})
+		</script>
+		<script src="http://old.code.mu/js/prism/prism.js?get=1"></script>
+		
+		<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(55311799, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/55311799" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->	</body>
+</html>
+
