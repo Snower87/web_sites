@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Урок №19. Основы работы с DOM в JavaScript. Практика 3</title>
+	<script type="text/javascript" src="task_19_03.js"></script>
+	<script type="text/javascript">	
+		function task_19_09(elem) {
+			alert(elem.value);
+		}
+
+		function task_19_10(elem) {
+			elem.value = 'Ой, я поменял текст!';
+		}		
+
+		function task_19_10_other_text(elem) {
+			elem.value = 'Ой, я еще раз поменял текст!!№!	:?"!№!?';
+		}			
+
+		function task_19_11(elem) {
+			elem.value = 'ку-ку';
+		}
+	</script>
+</head>
+<body>
+	<h1>Урок №19. Основы работы с DOM в JavaScript. Практика 3</h1>
+	<a href="attrs.html" target="_blank">Атрибуты для событий</a>
+	<h2>Задача №8. Работа с this при нажатии. Событие onclick</h2>
+	<input type="text" onclick="task_19_09(this)" value="нажми на меня">
+
+	<h2>Задача №9. Работа с this при нажатии. Изменить содержимое импута</h2>
+	<input type="text" onclick="task_19_10(this)" value="нажми на меня">	
+
+	<h2>Задача №10. Работа с this при нажатии. Изменить содержимое импута при нажатии и при потере поля</h2>
+	<input type="text" onclick="task_19_10(this)" onblur="task_19_10_other_text(this)" value="нажми на меня">	
+
+	<h2>Задача №11. Поменять название кнопки</h2>
+	<input type="submit" id="input_id_11" value="нажми меня" onclick="task_19_11(this)">
+
+	<h2>Задача №12. Свойство disabled</h2>
+	<input type="submit" id="input_id_12" value="нажми меня" onclick="input_id_12.disabled = true; alert('123');">	
+
+	<h1>Работа с CSS</h1>	
+	<h2>Задача №14. Цвет текста в input'e</h2>
+	<input type="text" id="input_id_14" value="Привет )">
+	<input type="submit" value="нажми меня" onclick="input_id_14.style.color = 'red';">		
+
+	<h2>Задача №15. Отображение/пропадание инпута</h2>
+	<input type="text" id="input_id_15" value="Ку-ку 33">
+	<input type="submit" value="нажми меня. показать" onclick="input_id_15.style.display = 'block';">			
+	<input type="submit" value="нажми меня 2. скрыть" onclick="input_id_15.style.display = 'none';">				
+
+	<h2>Задача №16. CSS замена цвета и обрамления</h2>	
+	<input type="text" id="input_id_16" value="Задача №16. CSS замена цвета и обрамления">
+	<input type="submit" value="поменять цвет и рамку" onclick="input_id_16.style.color = 'green'; input_id_16.style='border-bottom: 2px solid red; background-color: #f6f6f6; border-radius: 5px 5px 5px 5px;'">			
+
+	<h2>Задача №17. Блокировка кнопки</h2>	
+	<input type="submit" id="btn_id_17_1" value="О, на меня можно нажать!" onclick="btn_id_17_1.disabled = true; btn_id_17_1.value = 'А теперь нельзя нажать'; btn_id_17_2.setAttribute('type','submit');">	
+	<input type="hidden" id="btn_id_17_2" value="О, на меня можно нажать!" onclick="btn_id_17_1.disabled = false; btn_id_17_2.setAttribute('type','hidden'); btn_id_17_1.value='О, на меня можно нажать!';">		
+
+	<h2>Задача №18. Счетчик нажатия на кнопку</h2>	
+	<input type="submit" id="btn_id_18" onclick="task_19_18(this)" value="0" style="width: 300px;">
+
+	<h2>Задача №19. Button: обтекание справа, слева</h2>
+	<input type="text" id="input_id_19" value="10-20-30">
+	<button onclick="task_19_19()">Нажми меня</button>
+
+	<h2>Задача №20. Работа через класс</h2>	
+	<input type="text" value="Ку-ку" id="input_id_20" class="eee www ddd">
+	<!-- <button onclick="task_19_20()">Нажми на меня!</button> -->
+	<input type="submit" id="btn_id_20" onclick="task_19_20()" value="Нажми на меня!">
+</body>
+</html>
