@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Урок №20. Работа с элементами страницы в JavaScript</title>
+	<script type="text/javascript" src="task_20_01.js"></script>
+	<script type="text/javascript">
+		var iGlobal = 0;
+		function func1() {
+			var elem = document.getElementById('testInner1'); //получаем наш абзац
+			//elem.innerHTML = '123'; //записываем в него новый текст
+			elem.innerHTML = iGlobal++;
+		}
+
+		function func2() {
+			var elem = document.getElementById('testInner2');
+			elem.innerHTML = '<b>2. жирный текст</b>'
+		}
+
+		function func3() {
+			var elem = document.getElementById('testOuter3');
+			elem.outerHTML = '<b>! заменил</b><br>';
+		}
+
+		function func4() {
+			//Получаем массив абзацев в переменную elems:
+			var elems = document.getElementsByTagName('p');
+			elems[3].innerHTML = '1'; //первому абзацу ставим текст '1'
+			elems[4].innerHTML = '2';
+			elems[5].innerHTML = '3';
+		}
+
+		function func4() {
+			var elems = document.getElementsByTagName('p');
+			elems[3].innerHTML = '1'; //первому абзацу ставим текст '1'
+			elems[4].innerHTML = '2';
+			elems[5].innerHTML = '3';
+		}		
+
+		function func5() {
+			var elems = document.getElementsByTagName('p');
+			for (var i = 0; i < elems.length; i++) {
+				elems[i].innerHTML = i;
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>1. Работа с innerHTML, outerHTML</h1>
+	<!-- В примере ниже у нас есть абзац. Давайте сменим ему текст с помощью свойства innerHTML. Для этого получим ссылку на этот абзац с помощью getElementById в переменную elem. Затем таким образом - elem.innerHTML = 'Новый текст' - запишем в него новый текст: -->
+	<p id = "testInner1">Текст абзаца</p>
+	<input type="submit" onclick="func1()">
+	<br><br>
+
+	<p id = "testInner2">2. жирный текст</p>
+	<input type="submit" onclick="func2()">
+	<br><br>	
+
+	<!-- Как вы видите, наш абзац исчез и заменился на тег b. -->
+	<p id = "testOuter3">3. замена абзаца</p>
+	<input type="submit" onclick="func3()">
+	<br><br>
+
+	<h1>2. Работа с getElementsByTagName</h1>
+	<!-- Во всех примерах выше мы с вами работали с методом getElementById, который получал только одно свойство по его атрибуту id. Однако существуют и другие способы получения свойств, к примеру, с помощью метода getElementsByTagName, который получает группу тегов по их имени. Например, можно получить все абзацы p или все заголовки h2. -->
+	<!-- Учтите только один нюанс - наш метод возвращает не одно свойство, а массив свойств. -->
+	<p>Текст абзаца.</p>
+	<p>Текст абзаца.</p>
+	<p>Текст абзаца.</p>
+	<input type="submit" onclick="func4()">
+
+	<!-- В следующем примере мы сменим содержимое всех абзацев на страницы на '!', воспользовавшись для этого циклом for: -->
+	<input type="submit" value="сменить содержимое всех абзацев" onclick="func5()">
+	<br><br>
+
+	<h1>3. Обращение к свойствам через свойства document</h1>
+	<!-- Некоторые теги страницы можно не получать методами типа getElementById, а обратиться к ним как свойствам объекта document. К примеру, к тегу <body> можно обратиться так: document.body, а к тегу <head> - вот так: document.head. Такое работает не для всех тегов, а только для избранных. -->
+	<!-- Учтите, что нельзя получить доступ к тому свойству, которого еще не существует в момент выполнения скрипта. Поэтому, если скрипт находится в <head>, то в нем недоступен document.body. -->
+	<!-- 
+	<html>
+		<head>
+			<script>
+				alert(document.body); //null, так как body еще нет
+			</script>
+		</head>
+		<body>
+			<script>
+				alert(document.body); //body уже есть
+			</script>
+		</body>
+	</html>
+	 -->
+	 <br><br>
+
+	 <h1>4. Работа с формами</h1>
+	 <!-- Можно получить все HTML формы на странице через document.forms. В результате мы получим массив форм, будто он был получен с помощью getElementsByTagName (точнее это будет не массив, а псевдомассив (или коллекция) свойств). -->	 
+
+	 <h1>5. Обращение к свойствам форм</h1>
+	 <!-- К свойствам формы, так же, как и к самим формам, можно обращаться по имени из атрибута name: -->
+	 <!-- 
+		<body>
+			<form name="form1">
+				<input value="1" name="input1">
+				<input value="2" name="input2">
+				<input value="3" name="input3">
+			</form>
+		</body>
+		document.forms.form1.elements.input1.value = '!';	 	
+	 -->
+</body>
+</html>

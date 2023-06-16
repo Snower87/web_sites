@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Пример работы с формами в JavaScript</title>
+	<script type="text/javascript">
+		function funcForm1() {
+			document.forms[0].innerHTML = '!';
+		}
+
+		function funcForm2() {
+			var forms = document.forms;
+			for (var i = 0; i < forms.length; i++) {
+				forms[i].innerHTML = i;
+			}
+		}	
+
+		function funcForm3() {
+			document.forms.form1.innerHTML = 'Форма 1';
+			document.forms['form2'].innerHTML = document.forms.form2.name;
+		}				
+	</script>
+</head>
+<body>
+	<h1>4. Работа с формами</h1>
+	<form name="form1">
+		<input value="1">
+		<input value="2">
+		<input value="3">
+	</form>
+	<form name="form2">
+		<input value="1">
+		<input value="2">
+		<input value="3">
+	</form>	
+	<input type="submit" value="Кнопка №1. Сменить содержимое в форме 1" onclick="funcForm1()">
+	<br>
+	<input type="submit" value="Кнопка №2. Во всех формах" onclick="funcForm2()">
+	<br>
+	<input type="submit" value="Кнопка №3. Поменять по name" onclick="funcForm3()">
+	<br>	
+</body>
+</html>

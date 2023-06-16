@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Пример работы с формами №2 в JavaScript</title>
+	<script type="text/javascript">
+		function funcForm1() {
+			//document.forms[1].elements[0].value = 'ha-ha';
+
+			var elements = document.forms[1].elements;
+			for (var i = 0; i < elements.length; i++) {
+				elements[i].value = '!';
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>5. Обращение к свойствам форм</h1>
+	<form>
+		<input value="1">
+		<input value="2">
+		<input value="3">
+	</form>
+	<form>
+		<input value="1">
+		<input value="2">
+		<input value="3">
+	</form>
+	<input type="submit" onclick="funcForm1()">
+</body>
+</html>
